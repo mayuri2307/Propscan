@@ -7,7 +7,11 @@ import "./gallery.css"
 
 export default function Gallery() {
     return (
-        <div style={{ padding: "48px 100px" }}>
+        <Row>
+            <Col xs="1" />
+            <Col xs="10">
+
+        <div className='px-2'>
             <p className='top text-center text-md-start'>Aapki <span className='f-bold'>Gallery</span></p>
             <div>
                 <span style={{
@@ -66,5 +70,8 @@ export default function Gallery() {
                 </Row>
             </div>
         </div>
+            </Col>
+            <Col xs="1" />
+        </Row>
     )
 }
