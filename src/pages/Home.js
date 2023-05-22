@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Blank from "../components/Blank";
+import Header from '../components/header';
 import Metrics from '../components/metrics/Metrics';
 import Properties from "../components/properties/Properties";
 import Info from "../components/info/info";
@@ -14,7 +15,8 @@ import Footer from '../components/footer/Footer';
 export default function Home() {
   return (
     <div>
-        Some Data 
+        <Header />
+        <Blank />
         <Blank />
         <Metrics />
         <Blank />
