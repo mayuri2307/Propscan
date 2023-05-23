@@ -11,11 +11,11 @@ export default function Experts() {
     return (
         <>
             <Row>
-                <Col>
+                <Col xs="12">
                     <p className='top text-center'><span className='f-bold'>Experts</span> Aapke Liye</p>
                 </Col>
             </Row>
-            <Row className='stat'>
+            <Row className=''>
                 <Col xs="1" />
                 <Col xs="10">
                     <div className='px-2'>
