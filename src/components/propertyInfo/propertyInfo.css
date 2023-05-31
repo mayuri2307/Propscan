@@ -22,3 +22,9 @@
     left: 0%;
     border-radius: 8px 0px 0px 8px;
 }
+
+.property-extra-bck{
+    background: conic-gradient(from 180deg at 50% 46.92%, rgba(195, 240, 250, 0) 0deg, #E9F9FE 133.12deg, rgba(195, 240, 250, 0) 360deg);
+    border-radius: 8px;
+    margin-bottom: 32px;
+}

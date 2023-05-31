@@ -45,4 +45,4 @@ const PagerIndicator = ({
     );
 };
 
-export { PagerIndicator };
+export default PagerIndicator;
