@@ -3,6 +3,7 @@ import './assets/App.css';
 import Home from "./pages/Home";
 import Property from "./pages/Property";
 import PropertyListingHome from "./pages/PropertyListingHome"
+import Login from "./pages/Login";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/properties" element={<PropertyListingHome />} />
         <Route path="/property" element={<Property />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </BrowserRouter>
   );
