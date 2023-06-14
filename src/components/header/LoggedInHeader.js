@@ -4,7 +4,7 @@ import "./header.css"
 import SearchbarHeader from '../searchbar/SearchbarHeader'
 
 
-export default function LoggedInHeader() {
+export default function LoggedInHeader(props) {
     return (
         <div className='logged-in-header'>
                 <div>
@@ -12,7 +12,7 @@ export default function LoggedInHeader() {
                     <img style={{width:"90px", height:"auto"}} src='images/propscan.png' />
                     <span className='header-com'>.com</span>
                 </div>
-                <SearchbarHeader />
+                {props.showSearchBar&&<SearchbarHeader />}
             {/* <div>
                 <Searchbar />
             </div> */}
