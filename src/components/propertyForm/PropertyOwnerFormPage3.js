@@ -1,9 +1,7 @@
 import React from "react";
-// import React from "react";
-import ProgressStepper from "./ProgressStepper";
-import "./progressStepper.css";
+import ProgressStepper from "../propertyForm/progressStepper/index";
 import LoggedInHeader from "../header/LoggedInHeader";
-import OwnerDashborad3 from "./OwnerDashboard3";
+import PropertyProfile from "../propertyForm/propertyPropertyProfile/index";
 
 function PropertyOwnerFormPage3(props) {
   return (
@@ -19,10 +17,10 @@ function PropertyOwnerFormPage3(props) {
               filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
             }}
           >
-            <ProgressStepper></ProgressStepper>
+            <ProgressStepper formPageNum={props.formPageNum}></ProgressStepper>
           </div>
           <div class="col-10">
-            <OwnerDashborad3 updateFormPage={props.updateFormPage} />
+            <PropertyProfile updateFormPage={props.updateFormPage} />
           </div>
         </div>
       </div>

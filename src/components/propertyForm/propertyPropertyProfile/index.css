@@ -97,21 +97,21 @@
     color: #0D2855;
 }
 
-.para7{
-    
-width: 280px;
-height: 16px;
-margin-top: -2.5vh;
-margin-left:3.5vh ;
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 300;
-font-size: 14px;
-line-height: 16px;
+.para7 {
 
-/* identical to box height, or 114% */
+    width: 280px;
+    height: 16px;
+    margin-top: -2.5vh;
+    margin-left: 3.5vh;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
 
-color: #0D2855;
+    /* identical to box height, or 114% */
+
+    color: #0D2855;
 
 
 }

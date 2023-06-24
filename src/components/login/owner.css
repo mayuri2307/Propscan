@@ -1,17 +1,11 @@
-.p {
-    /* width: 150px;
-    height: 20px; */
+.paragraph1 {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
     line-height: 20px;
-    /* identical to box height, or 143% */
-
     text-align: center;
     text-decoration-line: underline;
-
-    /* Color - Primary */
     margin: 2.5vh;
     color: #092C4C;
 
@@ -23,6 +17,7 @@ input[type="text"] {
     border: 1px solid #0D2855;
     border-radius: 30px;
     margin: 1vh;
+    font-size: 14px;
 
 }
 
@@ -31,6 +26,7 @@ input[type="tel"] {
     border: 1px solid #0D2855;
     border-radius: 30px;
     margin: 1vh;
+    font-size: 14px;
 
 }
 
@@ -39,6 +35,7 @@ input[type="email"] {
     border: 1px solid #0D2855;
     border-radius: 30px;
     margin: 1vh;
+    font-size: 14px;
 
 }
 
@@ -53,20 +50,13 @@ input[type="email"] {
 }
 
 
-.text {
-
-
+.lable {
     font-family: 'Segoe UI';
     font-style: normal;
     font-weight: 400;
     font-size: 10px;
     line-height: 22px;
-    /* identical to box height, or 224% */
-
-    margin: -2.5%;
-
-    /* Color - Grey 2 */
-
+    
     color: #4F4F4F;
 }
 
@@ -81,22 +71,3 @@ icon_style {
 }
 
 
-.buttons {
-    position: absolute;
-    left: 40%;
-    right: 37.66%;
-    top: 15.48%;
-    bottom: 72.72%;
-
-    font-family: 'Segoe UI';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 10px;
-    line-height: 22px;
-    /* identical to box height, or 224% */
-
-
-    /* Color - Grey 2 */
-
-    color: #4F4F4F;
-}

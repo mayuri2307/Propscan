@@ -1,7 +1,7 @@
 import React from "react";
-import "./dashboard2.css";
+import "./index.css";
 
-function OwnerDashboard2(props) {
+function PropertyLocationDetails(props) {
   return (
     <div>
       <button
@@ -92,4 +92,4 @@ function OwnerDashboard2(props) {
   );
 }
 
-export default OwnerDashboard2;
+export default PropertyLocationDetails;

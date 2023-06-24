@@ -1,17 +1,13 @@
 .a_style {
 
-    width: 144px;
-    height: 24px;
-
     font-family: 'Helvetica Neue';
     font-style: normal;
     font-weight: 700;
     font-size: 15px;
     line-height: 24px;
-
-    margin-right: 8vh;
-
     color: #0D2855;
+    border-radius:8px;
+    padding:8px
 }
 
 
@@ -109,9 +105,9 @@
 .radio {
     display: flex;
     margin: 14vh;
-    margin-left:-5vh ;
+    margin-left: -5vh;
     margin-top: -8vh;
-    
+
 
 }
 
@@ -120,7 +116,7 @@
     width: 88px;
     height: 16px;
 
-    margin-left: 10vh ;
+    margin-left: 10vh;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
@@ -130,10 +126,4 @@
 
 
     color: #0D2855;
-}
-
-
-
-.a_style:active{
-    background-color: #092C4C;
 }

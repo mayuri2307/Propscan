@@ -1,12 +1,16 @@
 import React, { useState } from "react";
-import "./dashboard3.css";
+import "./index.css";
 import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 
 import AddIcon from "@mui/icons-material/Add";
 
-function OwnerDashboard3(props) {
+function PropertyProfile(props) {
   const [selected, setSelected] = useState("");
+  const [selected1, setSelected1] = useState("");
+  const [selected2, setSelected2] = useState("");
+  const [selected3, setSelected3] = useState("");
+  const [selected4, setSelected4] = useState("");
   return (
     <div>
       <button
@@ -87,51 +91,51 @@ function OwnerDashboard3(props) {
         <Stack direction="row" spacing={1} className="chip3">
           <Chip
             label="1"
-            onClick={() => setSelected("1")}
-            variant={selected === "1" ? "default" : "outlined"}
+            onClick={() => setSelected1("1")}
+            variant={selected1 === "1" ? "default" : "outlined"}
             component="a"
             href="#basic-chip"
             clickable
             style={{
               marginTop: "-3vh",
               marginLeft: "4.5vh",
-              backgroundColor: selected === "1" ? "#E8F9FD" : "white",
+              backgroundColor: selected1 === "1" ? "#E8F9FD" : "white",
             }}
           />
           <Chip
             label="2"
-            onClick={() => setSelected("2")}
-            variant={selected === "2" ? "default" : "outlined"}
+            onClick={() => setSelected1("2")}
+            variant={selected1 === "2" ? "default" : "outlined"}
             component="a"
             href="#basic-chip"
             clickable
             style={{
               marginTop: "-3vh",
-              backgroundColor: selected === "2" ? "#E8F9FD" : "white",
+              backgroundColor: selected1 === "2" ? "#E8F9FD" : "white",
             }}
           />
           <Chip
             label="3"
-            onClick={() => setSelected("3")}
-            variant={selected === "3" ? "default" : "outlined"}
+            onClick={() => setSelected1("3")}
+            variant={selected1 === "3" ? "default" : "outlined"}
             component="a"
             href="#basic-chip"
             clickable
             style={{
               marginTop: "-3vh",
-              backgroundColor: selected === "3" ? "#E8F9FD" : "white",
+              backgroundColor: selected1 === "3" ? "#E8F9FD" : "white",
             }}
           />
           <Chip
             label="4"
-            onClick={() => setSelected("4")}
-            variant={selected === "4" ? "default" : "outlined"}
+            onClick={() => setSelected1("4")}
+            variant={selected1 === "4" ? "default" : "outlined"}
             component="a"
             href="#basic-chip"
             clickable
             style={{
               marginTop: "-3vh",
-              backgroundColor: selected === "4" ? "#E8F9FD" : "white",
+              backgroundColor: selected1 === "4" ? "#E8F9FD" : "white",
             }}
           />
         </Stack>
@@ -148,51 +152,52 @@ function OwnerDashboard3(props) {
         <Stack direction="row" spacing={1} className="chip3">
           <Chip
             label="1"
-            onClick={() => setSelected("1")}
-            variant={selected === "1" ? "default" : "outlined"}
+            onClick={() => setSelected2("1")}
+            variant={selected2 === "1" ? "default" : "outlined"}
             component="a"
             href="#basic-chip"
             clickable
             style={{
               marginTop: "-3vh",
               marginLeft: "4.5vh",
-              backgroundColor: selected === "1" ? "#E8F9FD" : "white",
+              backgroundColor: selected2 === "1" ? "#E8F9FD" : "white",
             }}
           />
           <Chip
             label="2"
-            onClick={() => setSelected("2")}
-            variant={selected === "2" ? "default" : "outlined"}
+            onClick={() => setSelected2("2")}
+            variant={selected2 === "2" ? "default" : "outlined"}
             component="a"
             href="#basic-chip"
             clickable
             style={{
               marginTop: "-3vh",
-              backgroundColor: selected === "2" ? "#E8F9FD" : "white",
+              backgroundColor: selected2 === "2" ? "#E8F9FD" : "white",
             }}
           />
           <Chip
             label="3"
-            onClick={() => setSelected("3")}
-            variant={selected === "3" ? "default" : "outlined"}
+            onClick={() => setSelected2("3")}
+            variant={selected2 === "3" ? "default" : "outlined"}
             component="a"
             href="#basic-chip"
             clickable
             style={{
               marginTop: "-3vh",
-              backgroundColor: selected === "3" ? "#E8F9FD" : "white",
+              backgroundColor: selected2 === "3" ? "#E8F9FD" : "white",
             }}
           />
           <Chip
             label="More than 3"
-            onClick={() => setSelected("More than 3")}
-            variant={selected === "More than 3" ? "default" : "outlined"}
+            onClick={() => setSelected2("More than 3")}
+            variant={selected2 === "More than 3" ? "default" : "outlined"}
             component="a"
             href="#basic-chip"
             clickable
             style={{
               marginTop: "-3vh",
-              backgroundColor: selected === "More than 3" ? "#E8F9FD" : "white",
+              backgroundColor:
+                selected2 === "More than 3" ? "#E8F9FD" : "white",
             }}
           />
         </Stack>
@@ -206,7 +211,11 @@ function OwnerDashboard3(props) {
         <p className="para5">Atleast one area type is mandatory</p>
       </div>
       <div className="input-group mb-3 ">
-        <select name="feets" id="feets" style={{ padding: "0", margin: "0" }}>
+        <select
+          name="feets"
+          id="feets"
+          style={{ padding: "0", borderRadius: "30px", margin: "0px" }}
+        >
           <option value="sq.ft">sq.ft</option>
           <option value="sq.yards">sq.yards</option>
           <option value="sq.m.">sq.m.</option>
@@ -214,7 +223,12 @@ function OwnerDashboard3(props) {
           <option value="marla">marla</option>
           <option value="censt">censt</option>
         </select>
-        <input type="text" placeholder="Carpet Area" aria-label="Carpet Area" />
+        <input
+          type="text"
+          placeholder="Carpet Area"
+          aria-label="Carpet Area"
+          style={{ borderRadius: "30px" }}
+        />
       </div>
       <div style={{ display: "flex" }}>
         <div className="icon1">
@@ -233,15 +247,15 @@ function OwnerDashboard3(props) {
         <Stack direction="row" spacing={1} className="chip3">
           <Chip
             label="+ Pooja Room"
-            onClick={() => setSelected("+ Pooja Room")}
-            variant={selected === "+ Pooja Room" ? "default" : "outlined"}
+            onClick={() => setSelected3("+ Pooja Room")}
+            variant={selected3 === "+ Pooja Room" ? "default" : "outlined"}
             component="a"
             href="#basic-chip"
             clickable
             style={{
               marginLeft: "2vh",
               backgroundColor:
-                selected === "+ Pooja Room" ? "#E8F9FD" : "white",
+                selected3 === "+ Pooja Room" ? "#E8F9FD" : "white",
               color: "#0D2855",
               fontFamily: "Poppins",
               fontStyle: "normal",
@@ -251,15 +265,15 @@ function OwnerDashboard3(props) {
           />
           <Chip
             label="+ Study Room"
-            onClick={() => setSelected("+ Study Room")}
-            variant={selected === "+ Study Room" ? "default" : "outlined"}
+            onClick={() => setSelected3("+ Study Room")}
+            variant={selected3 === "+ Study Room" ? "default" : "outlined"}
             component="a"
             href="#basic-chip"
             clickable
             style={{
               marginLeft: "2vh",
               backgroundColor:
-                selected === "+ Study Room" ? "#E8F9FD" : "white",
+                selected3 === "+ Study Room" ? "#E8F9FD" : "white",
               color: "#0D2855",
               fontFamily: "Poppins",
               fontStyle: "normal",
@@ -269,15 +283,15 @@ function OwnerDashboard3(props) {
           />
           <Chip
             label="+ Servant Room"
-            onClick={() => setSelected("+ Servant Room")}
-            variant={selected === "+ Servant Room" ? "default" : "outlined"}
+            onClick={() => setSelected3("+ Servant Room")}
+            variant={selected3 === "+ Servant Room" ? "default" : "outlined"}
             component="a"
             href="#basic-chip"
             clickable
             style={{
               marginLeft: "2vh",
               backgroundColor:
-                selected === "+ Servant Room" ? "#E8F9FD" : "white",
+                selected3 === "+ Servant Room" ? "#E8F9FD" : "white",
               color: "#0D2855",
               fontFamily: "Poppins",
               fontStyle: "normal",
@@ -287,15 +301,15 @@ function OwnerDashboard3(props) {
           />
           <Chip
             label="+ Store Room"
-            onClick={() => setSelected("+ Store Room")}
-            variant={selected === "+ Store Room" ? "default" : "outlined"}
+            onClick={() => setSelected3("+ Store Room")}
+            variant={selected3 === "+ Store Room" ? "default" : "outlined"}
             component="a"
             href="#basic-chip"
             clickable
             style={{
               marginLeft: "2vh",
               backgroundColor:
-                selected === "+ Store Room" ? "#E8F9FD" : "white",
+                selected3 === "+ Store Room" ? "#E8F9FD" : "white",
               color: "#0D2855",
               fontFamily: "Poppins",
               fontStyle: "normal",
@@ -312,15 +326,15 @@ function OwnerDashboard3(props) {
         <Stack direction="row" spacing={1} className="chip3">
           <Chip
             label="+ Pooja Room"
-            onClick={() => setSelected("+ Pooja Room")}
-            variant={selected === "+ Pooja Room" ? "default" : "outlined"}
+            onClick={() => setSelected4("+ Pooja Room")}
+            variant={selected4 === "+ Pooja Room" ? "default" : "outlined"}
             component="a"
             href="#basic-chip"
             clickable
             style={{
               marginLeft: "2vh",
               backgroundColor:
-                selected === "+ Pooja Room" ? "#E8F9FD" : "white",
+                selected4 === "+ Pooja Room" ? "#E8F9FD" : "white",
               color: "#0D2855",
               fontFamily: "Poppins",
               fontStyle: "normal",
@@ -330,15 +344,15 @@ function OwnerDashboard3(props) {
           />
           <Chip
             label="+ Study Room"
-            onClick={() => setSelected("+ Study Room")}
-            variant={selected === "+ Study Room" ? "default" : "outlined"}
+            onClick={() => setSelected4("+ Study Room")}
+            variant={selected4 === "+ Study Room" ? "default" : "outlined"}
             component="a"
             href="#basic-chip"
             clickable
             style={{
               marginLeft: "2vh",
               backgroundColor:
-                selected === "+ Study Room" ? "#E8F9FD" : "white",
+                selected4 === "+ Study Room" ? "#E8F9FD" : "white",
               color: "#0D2855",
               fontFamily: "Poppins",
               fontStyle: "normal",
@@ -348,15 +362,15 @@ function OwnerDashboard3(props) {
           />
           <Chip
             label="+ Servant Room"
-            onClick={() => setSelected("+ Servant Room")}
-            variant={selected === "+ Servant Room" ? "default" : "outlined"}
+            onClick={() => setSelected4("+ Servant Room")}
+            variant={selected4 === "+ Servant Room" ? "default" : "outlined"}
             component="a"
             href="#basic-chip"
             clickable
             style={{
               marginLeft: "2vh",
               backgroundColor:
-                selected === "+ Servant Room" ? "#E8F9FD" : "white",
+                selected4 === "+ Servant Room" ? "#E8F9FD" : "white",
               color: "#0D2855",
               fontFamily: "Poppins",
               fontStyle: "normal",
@@ -379,7 +393,7 @@ function OwnerDashboard3(props) {
             Total Floors
             <input
               type="text"
-              //   class="form-control"
+              // class="form-control"
               placeholder="Type here"
               aria-label="state"
               aria-describedby="basic-addon1"
@@ -528,7 +542,7 @@ function OwnerDashboard3(props) {
           type="submit"
           className="button"
           onClick={() => props.updateFormPage("increase")}
-          style={{ marginTop: "8vh", marginLeft:"2vh" }}
+          style={{ marginTop: "8vh", marginLeft: "2vh" }}
         >
           Continue
         </button>
@@ -537,4 +551,4 @@ function OwnerDashboard3(props) {
   );
 }
 
-export default OwnerDashboard3;
+export default PropertyProfile;
