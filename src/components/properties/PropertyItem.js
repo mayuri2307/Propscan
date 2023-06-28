@@ -14,16 +14,15 @@ export default function PropertyItem({ src, text, subText1, subText2, price }) {
           <span className='sell'>For Sell</span>
         </div>
         <div style={{position:"absolute", bottom:"4%", right:"2%"}}>
-          <button className='like'><img src="images/heart.svg" /></button>
+          <button className='like p-1'><img src="images/heart.svg" /></button>
         </div>
-
       </div>
       <div className='p-4 pb-1'>
         <span className='text'>{text}</span>
         <br />
         <span className='text2'>{subText1}<br /> {subText2}</span>
       </div>
-      <span className='price'>{price}</span>
+      <p className='price'>{price}</p>
     </div>
   )
 }

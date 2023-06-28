@@ -11,8 +11,8 @@ export default function Searchbar() {
   return (
     <div className='searchbar-setter'>
       <Row>
-        <Col xs="0" md="2"></Col>
-        <Col xs="12" md="8" className='p-2'>
+        <Col xs="1" lg="2"></Col>
+        <Col xs="10" lg="8" className='p-2'>
           <div className='p-2 searchbar-main'>
             <Row>
               <Col xs="3" className='text-center my-auto'>
@@ -36,7 +36,7 @@ export default function Searchbar() {
             </Row>
           </div>
         </Col>
-        <Col xs="0" md="2"></Col>
+        <Col xs="1" lg="2"></Col>
       </Row>
     </div>
   )

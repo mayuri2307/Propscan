@@ -3,7 +3,7 @@ import React from 'react'
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-import PropertyItem from "../properties/carousel/PropertyItem";
+import PropertyItem from "../properties/PropertyItem";
 
 import getFontData from '../../utils/getFontData';
 
