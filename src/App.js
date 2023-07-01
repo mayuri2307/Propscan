@@ -4,17 +4,21 @@ import Home from "./pages/Home";
 import Property from "./pages/Property";
 import PropertyListingHome from "./pages/PropertyListingHome"
 import Login from "./pages/Login";
+import Footer from './components/footer/Footer';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/properties" element={<PropertyListingHome />} />
-        <Route path="/property" element={<Property />} />
-        <Route path="/login" element={<Login />} />
-      </Routes>
-    </BrowserRouter>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/properties" element={<PropertyListingHome />} />
+          <Route path="/property" element={<Property />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </BrowserRouter>
+      <Footer />
+    </>
   );
 }
 

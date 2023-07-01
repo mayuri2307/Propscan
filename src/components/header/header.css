@@ -46,8 +46,10 @@
 }
 
 .logged-in-header{
-    background-color: #092C4C;
+    background-color: #0D2855;
     height: 10vh;
     display: flex;
-    align-items: center
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }

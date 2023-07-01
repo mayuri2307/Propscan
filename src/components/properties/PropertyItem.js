@@ -8,7 +8,8 @@ export default function PropertyItem({ src, text, subText1, subText2, price }) {
       <div style={{position:"relative"}}>
         <img src={src} style={{
           width: "100%",
-          height: "auto"
+          height: "auto",
+          maxHeight: "320px",
         }} />
         <div style={{position:"absolute", top:"8%", left:"0%"}}>
           <span className='sell'>For Sell</span>

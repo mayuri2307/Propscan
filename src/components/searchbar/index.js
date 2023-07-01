@@ -12,12 +12,12 @@ import "./searchbar.css"
 
 const searchSuggestions = ["Dwarka", "Pitampura", "Greater Kailash", "Defence Colony", "Saket", "Punjabi Bagh", "Lajpat Nagar", "Model Town", "Karol Bagh", "Shahdra"];
 
-export default function Searchbar() {
+export default function Searchbar({defaultClass="searchbar-setter"}) {
   const navigate = useNavigate();
   const [squery, setSquery] = useState("");
   const [showSuggestions, setShowSuggestions] = useState(false);
   return (
-    <div className='searchbar-setter'>
+    <div className={defaultClass}>
       <Row>
         <Col xs="1" lg="2"></Col>
         <Col xs="10" lg="8" className='p-2'>
@@ -37,10 +37,9 @@ export default function Searchbar() {
                   isSearchable={false}
                   placeholder="New Delhi"
               />
-                {/* <span className='searchbar-drop'>New Delhi <img src="images/img_arrowdown.svg" style={{paddingBottom:"2px", paddingLeft:"10px"}} /></span> */}
               </Col>
               <Col xs="8" sm="9" style={{borderLeft: "1px solid #0D2855", position:"relative"}} className='my-auto'>
-                <div>
+                <div style={{zIndex:"2"}}>
                   <input className='searchbar-input' value={squery} onClick={() => setShowSuggestions(true)} onChange={(e) => setSquery(e.target.value)} placeholder='Search for loacality, Landmark, Project or Builder' />
                   <button className='btn-info float-end' onClick={() => navigate("/properties")}><span className='expert-btn-text px-3'>Search</span></button>
                   {showSuggestions && <div className='search-suggestions'>
@@ -53,25 +52,29 @@ export default function Searchbar() {
                     ))}
                   </div>}
                 </div>
-                <div className='searchbar-text p-3 d-none d-lg-block'>
-                  <br/>
-                  <br/>
-                  <span className='searchbar-text-bold'>Buy</span>
-                  <span>Rent</span>
-                  <span>Commercial</span>
-                  <span>PG/Co-Living</span>
-                  <span>Plots</span>
-                </div>
+                {defaultClass != "" && 
+                  <div className='searchbar-text p-3 d-none d-lg-block'>
+                    <br/>
+                    <br/>
+                    <span className='searchbar-text-bold'>Buy</span>
+                    <span>Rent</span>
+                    <span>Commercial</span>
+                    <span>PG/Co-Living</span>
+                    <span>Plots</span>
+                  </div>
+                }
               </Col>
             </Row>
-            <div className='searchbar-text p-3 d-block d-lg-none mt-4'>
-              <br/>
-              <span className='searchbar-text-bold'>Buy</span>
-              <span>Rent</span>
-              <span>Commercial</span>
-              <span>PG/Co-Living</span>
-              <span>Plots</span>
-            </div>
+            {defaultClass != "" && 
+              <div className='searchbar-text p-3 d-block d-lg-none mt-4'>
+                <br/>
+                <span className='searchbar-text-bold'>Buy</span>
+                <span>Rent</span>
+                <span>Commercial</span>
+                <span>PG/Co-Living</span>
+                <span>Plots</span>
+              </div>
+            }
           </div>
         </Col>
         <Col xs="1" lg="2"></Col>
