@@ -22,8 +22,8 @@ export default function PropertyInfo() {
             <p style={{marginBottom:"12px", ...getFontData("20px","700")}}>The Cressida - Chetan Garg Real Estate</p>
             <p style={getFontData("16px", "400", {lineHeight:"16px", color:"#4F4F4F"})}>2,3 BHK Independent Floor in Dwarka, Delhi</p>
           </div>
-            <img src="images/share_filled.svg" className='pe-2' /> 
-            <img src="images/heart_filled.svg" /> 
+            <img src="images/share_filled.svg" className='pe-2' alt='not found' /> 
+            <img src="images/heart_filled.svg" alt='not found' /> 
           </Col>
           <Col xs="6">
             <div className='text-end mb-5 pb-3'>
@@ -37,15 +37,15 @@ export default function PropertyInfo() {
             <img style={{
               width:"100%",
               height: "auto"
-            }} src="images/property_1.png" />
+            }} src="images/property_1.png" alt='not found' /> 
           </Col>
           <Col xs="4" className='mt-3'>
             <div className='d-flex flex-column justify-content-between' style={{height:"100%"}}>
               <div>
-                <img className='fluid' style={{borderRadius: "8px 0px 0px 8px"}} src="images/property_2.png" />
+                <img className='fluid' style={{borderRadius: "8px 0px 0px 8px"}} src="images/property_2.png" alt='not found' />
               </div>
               <div style={{position:"relative"}}>
-                <img className='fluid' style={{borderRadius: "8px 0px 0px 8px"}} src="images/property_1.png" />
+                <img className='fluid' style={{borderRadius: "8px 0px 0px 8px"}} src="images/property_1.png" alt='not found' />
                 <div className='property-img-overlay'></div>
                 <span className='property-img-center' style={{
                   ...getFontData("20px", "700", {
@@ -98,7 +98,7 @@ export default function PropertyInfo() {
             </div>
           </Col>
           <Col xs="12" className='d-flex align-items-center'>
-            <img src='images/property_location.svg' />
+            <img src='images/property_location.svg' alt='not found' />
             <div className='p-4'>
               <span style={getFontData("20px", "700", {lineHeight:"26px"})}>Property Location</span><br/>
               <span style={getFontData("16px", "400", {lineHeight:"16px", color:"#4F4F4F"})}>Falana Falana Street, Dwarka, New Delhi</span>
@@ -159,11 +159,11 @@ export default function PropertyInfo() {
               }}>Amenities</p>
               <div className='d-flex align-items-center px-3'>
                 <div className='text-center p-3'>
-                  <img src="images/car.svg" className='mb-2' />
+                  <img src="images/car.svg" alt='not found' className='mb-2' />
                   <p>Parking</p>
                 </div>
                 <div className='text-center p-3'>
-                  <img src="images/game.svg" className='mb-2' />
+                  <img src="images/game.svg" alt='not found' className='mb-2' />
                   <p>Game Zone</p>
                 </div>
               </div>

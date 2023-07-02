@@ -1,7 +1,7 @@
 import React from "react";
 import LoggedInHeader from "../header/LoggedInHeader";
 import "./DashBoard.css";
-import DashBoardNavbar from "../propertyForm/DashboardNavbar";
+import DashBoardNavbar from "../propertyForm/DashboardNavbar/DashboardNavbar";
 import { useNavigate } from "react-router-dom";
 import Chart from "./Chart";
 import CircularBar from "./CircularBar";
@@ -15,7 +15,7 @@ function DashBoardHome() {
     <div>
       <LoggedInHeader></LoggedInHeader>
       <div
-        style={{ marginBottom: "3vh", marginLeft: "37vw", marginRight: "3vw" }}
+        style={{ marginBottom: "3vh", marginLeft: "26vw", marginRight: "3vw" }}
       >
         <DashBoardNavbar />
       </div>
