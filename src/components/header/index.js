@@ -1,10 +1,11 @@
 import React from "react";
-
+import { useNavigate } from "react-router-dom";
 import "./header.css";
 
 import Searchbar from "../searchbar";
 
 export default function Header() {
+  const navigate = useNavigate();
   return (
     <div className="header">
       <div
@@ -42,9 +43,10 @@ export default function Header() {
           </span>
           <span className="px-5">About Us</span>
           <span className="px-5">Contact Us</span>
-          <a href="/login">
-            <button className="btn-white">Log In/Sign Up</button>
-          </a>
+
+          <button onClick={() => navigate("/login")} className="btn-white">
+            Log In/Sign Up
+          </button>
         </div>
       </div>
       <div className="header-main-txt">
