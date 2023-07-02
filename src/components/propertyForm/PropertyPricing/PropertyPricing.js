@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./index.css";
+import "./PropertyPricing.css";
 import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 import AddIcon from "@mui/icons-material/Add";

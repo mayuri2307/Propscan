@@ -1,7 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import "./customer.css";
+import axios from "axios";
+import { propscan_base_url } from "../../utils/Route";
 
 function Customer1() {
+  const [full_name, setFull_Name] = useState("");
+  const [phone_no, setPhone_No] = useState("");
+  const [email, setEmail] = useState("");
+  console.log(full_name);
+  console.log(phone_no);
+  console.log(email);
+
+  const handleChange = () => {
+    axios
+      .post(`${propscan_base_url}/accounts/register`, {
+        user: {
+          "full_name": full_name,
+          "phone_no": phone_no,
+          "email": email,
+          "user_type": "BUYER",
+        },
+      })
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
+  };
+
   return (
     <div>
       <div class="container">
@@ -21,7 +44,7 @@ function Customer1() {
                     backgroundColor: "white",
                     border: " 1px solid #0D2855",
                     borderRadius: "30px 0px 0px 30px",
-                    padding: "0.9vh",
+                    padding: "0.7vh",
                     marginTop: "0vh",
                   }}
                 >
@@ -29,6 +52,8 @@ function Customer1() {
                 </span>
                 <input
                   type="text"
+                  value={full_name}
+                  onChange={(e) => setFull_Name(e.target.value)}
                   class="form-control"
                   placeholder="Full Name"
                   aria-label="Full Name"
@@ -49,7 +74,7 @@ function Customer1() {
                     backgroundColor: "white",
                     border: "1px solid #0D2855",
                     borderRadius: "30px 0px 0px 30px",
-                    padding: "1vh",
+                    padding: "0.8vh",
                     marginTop: "-2vh",
                   }}
                 >
@@ -57,6 +82,8 @@ function Customer1() {
                 </span>
                 <input
                   type="tel"
+                  value={phone_no}
+                  onChange={(e) => setPhone_No(e.target.value)}
                   class="form-control"
                   placeholder="+91  Mobile Number"
                   aria-label="phone"
@@ -77,7 +104,7 @@ function Customer1() {
                     backgroundColor: "white",
                     border: "1px solid #0D2855",
                     borderRadius: "30px 0px 0px 30px",
-                    padding: "1.4vh",
+                    padding: "1.2vh",
                     marginTop: "-1.9vh",
                   }}
                 >
@@ -85,6 +112,8 @@ function Customer1() {
                 </span>
                 <input
                   type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   class="form-control"
                   placeholder="Email Id"
                   aria-label="email"
@@ -94,22 +123,9 @@ function Customer1() {
             </div>
           </div>
         </div>
-        <div
-          className="form-check "
-          style={{ marginLeft: "4vh", marginTop: "-1.5vh" }}
-        >
-          <input
-            className="form-check-input checkout"
-            type="checkbox"
-            value=""
-            id="flexCheckDefault"
-          />
-        </div>
-        <div style={{ marginTop: "-4.5vh", marginLeft: "6.5vh" }}>
-          <label className="lable">Add additional information now</label>
-        </div>
+
         <div style={{ textAlign: "center", marginBottom: "0.6vh" }}>
-          <button className="btn1" type="submit">
+          <button className="btn1" type="submit" onClick={handleChange}>
             CONFIRM
           </button>
         </div>

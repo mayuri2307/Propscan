@@ -1,9 +1,9 @@
 import React from "react";
-import ProgressStepper from "../propertyForm/progressStepper/index";
-import LoggedInHeader from "../header/LoggedInHeader";
-import PropertyPhotos from "../propertyForm/propertyPhotos/index";
+import ProgressStepper from "../progressStepper/index";
+import LoggedInHeader from "../../header/LoggedInHeader";
+import PropertyPricing from "./PropertyPricing";
 
-export default function PropertyOwnerFormPage4(props) {
+export default function PropertyOwnerFormPage5(props) {
   return (
     <div>
       <div>
@@ -21,7 +21,7 @@ export default function PropertyOwnerFormPage4(props) {
               <ProgressStepper formPageNum={props.formPageNum}></ProgressStepper>
             </div>
             <div class="col-10">
-              <PropertyPhotos updateFormPage={props.updateFormPage} />
+              <PropertyPricing updateFormPage={props.updateFormPage} />
             </div>
           </div>
         </div>

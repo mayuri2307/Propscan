@@ -1,65 +1,33 @@
-import React, { useState } from "react";
-import { FileUploader } from "react-drag-drop-files";
-import "./index.css";
+import React from "react";
+import ProgressStepper from "../progressStepper/index";
+import LoggedInHeader from "../../header/LoggedInHeader";
+import PropertyPhotos from "./PropertyPhotos";
 
-function PropertyPhoto(props) {
-  const fileTypes = ["JPG", "PNG", "GIF"];
-  const [file, setFile] = useState(null);
-  const handleChange = (file) => {
-    setFile(file);
-  };
+export default function PropertyOwnerFormPage4(props) {
   return (
     <div>
-      <button
-        onClick={() => props.updateFormPage("decrease")}
-        type="button"
-        className=" butto2"
-      >
-        Back
-      </button>
       <div>
-        <p className="para_text">Add photos of your property (optional)</p>
-      </div>
-      <div>
-        <p className="para_text1">
-          A picture is worth a thousand words.87% of buyers look at photos
-          before buying
-        </p>
-      </div>
-      <div>
-        <p className="para_text2">Upload from desktop </p>
-      </div>
-      <div>
-        <FileUploader
-          handleChange={handleChange}
-          name="file"
-          types={fileTypes}
-        />
-      </div>
-      <div style={{ display: "flex" }}>
+        <LoggedInHeader></LoggedInHeader>
         <div>
-          <button
-            type="submit"
-            className="button"
-            onClick={() => props.updateFormPage("increase")}
-            style={{ marginTop: "25vh", marginLeft: "2vh" }}
-          >
-            Continue
-          </button>
-        </div>
-        <div>
-          <button
-            type="submit"
-            className="button"
-            onClick={() => props.updateFormPage("increase")}
-            style={{ marginTop: "25vh", marginLeft: "2vh" }}
-          >
-            Skip
-          </button>
+          <div class="row">
+            <div
+              class="col"
+              style={{
+                borderRight: "1px solid rgba(0, 0, 0, 0.1)",
+                mixBlendMode: "darken",
+                filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
+              }}
+            >
+              <ProgressStepper
+                formPageNum={props.formPageNum}
+              ></ProgressStepper>
+            </div>
+            <div class="col-10">
+              <PropertyPhotos updateFormPage={props.updateFormPage} />
+            </div>
+          </div>
         </div>
       </div>
     </div>
   );
 }
-
-export default PropertyPhoto;
