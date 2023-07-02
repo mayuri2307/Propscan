@@ -4,11 +4,11 @@ import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
 import StepContent from "@mui/material/StepContent";
-import Button from "@mui/material/Button";
-import Paper from "@mui/material/Paper";
+// import Button from "@mui/material/Button";
+// import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import { CircularProgress } from "@mui/material";
-import "./progressStepper.css";
+import "./index.css";
 // import CircularProgress from "react-native-circular-progress-indicator";
 
 const steps = [
@@ -34,21 +34,8 @@ const steps = [
   },
 ];
 
-export default function VerticalLinearStepper() {
-  const [activeStep, setActiveStep] = React.useState(0);
-
-  const handleNext = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
-  };
-
-  const handleBack = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep - 1);
-  };
-
-  const handleReset = () => {
-    setActiveStep(0);
-  };
-
+export default function VerticalLinearStepper(props) {
+  const [activeStep, setActiveStep] = React.useState(props.formPageNum - 1);
   return (
     <Box style={{ margin: "4vh" }}>
       <Stepper activeStep={activeStep} orientation="vertical">
@@ -58,7 +45,7 @@ export default function VerticalLinearStepper() {
             <StepContent>
               <Typography>{step.description}</Typography>
               <Box sx={{ mb: 2 }}>
-                <div>
+                {/* <div>
                   <Button
                     variant="contained"
                     onClick={handleNext}
@@ -73,20 +60,20 @@ export default function VerticalLinearStepper() {
                   >
                     Back
                   </Button>
-                </div>
+                </div> */}
               </Box>
             </StepContent>
           </Step>
         ))}
       </Stepper>
-      {activeStep === steps.length && (
+      {/* {activeStep === steps.length && (
         <Paper square elevation={0} sx={{ p: 3 }}>
           <Typography>All steps completed - you&apos;re finished</Typography>
           <Button onClick={handleReset} sx={{ mt: 1, mr: 1 }}>
             Reset
           </Button>
         </Paper>
-      )}
+      )} */}
 
       <Box
         sx={{

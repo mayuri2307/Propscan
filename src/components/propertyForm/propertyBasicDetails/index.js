@@ -1,59 +1,25 @@
 import React, { useState } from "react";
 import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
-import "./dashboard.css";
+import "./index.css";
+import DashBoardNavbar from "../DashboardNavbar";
 
-function OwnerDashborad(props) {
+function PropertyBasicDetails(props) {
   const [selected, setSelected] = useState("");
+
   return (
     <div>
-      <nav className="navbar navbar-expand-lg" style={{ margin: "3vh" }}>
-        <div className="container-fluid ">
-          <a
-            className="navbar-brand a_style"
-            href=""
-            style={{ marginRight: "15vh" }}
-          >
-            Dashboard
-          </a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div className="navbar-nav">
-              <a
-                className="nav-link active a_style"
-                aria-current="page"
-                href="/"
-              >
-                My Listings
-              </a>
-              <a className="nav-link active a_style" href="/">
-                CRM
-              </a>
-              <a className="nav-link active a_style" href="/">
-                CMA
-              </a>
-              <a className="nav-link active a_style" href="# ">
-                Meeting Scheduler
-              </a>
-              <a className="nav-link active a_style" href="/">
-                Analytics
-              </a>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <div
+        style={{
+          margin: "0 5vw",
+        }}
+      >
+        <DashBoardNavbar />
+      </div>
       <div>
-        <h2 className="heading">Welcome back Brijlal,Fill out basic details</h2>
+        <h2 className="heading">
+          Welcome back Brijlal, Fill out basic details
+        </h2>
       </div>
       <div>
         <p className="p">I'm looking to </p>
@@ -102,7 +68,6 @@ function OwnerDashborad(props) {
           clickable
         />
       </Stack>
-
       <p className="p1">What kind of property do you have? </p>
       <div className="radio">
         <div class="form-check">
@@ -115,7 +80,9 @@ function OwnerDashborad(props) {
           <label
             class="form-check-label"
             for="flexRadioDefault1"
-            style={{ color: "#0D2855" }}
+            style={{
+              color: "#0D2855",
+            }}
           >
             Residential
           </label>
@@ -132,8 +99,11 @@ function OwnerDashborad(props) {
           </label>
         </div>
       </div>
-
-      <div style={{ marginTop: "-11vh" }}>
+      <div
+        style={{
+          marginTop: "-11vh",
+        }}
+      >
         <Stack direction="row" spacing={1} className="chip">
           <Chip
             label="Flat / Apartment"
@@ -170,7 +140,6 @@ function OwnerDashborad(props) {
             clickable
           />
         </Stack>
-
         <Stack direction="row" cell spacing={1} className="chip1">
           <Chip
             label="Independent / Builder Floor"
@@ -281,7 +250,10 @@ function OwnerDashborad(props) {
         <button
           type="submit"
           className="button"
-          onClick={() => props.updateFormPage("increase")}
+          onClick={
+            () => props.updateFormPage("increase")
+            // () => props.handlePageChange("increase"))
+          }
         >
           Continue
         </button>
@@ -290,4 +262,4 @@ function OwnerDashborad(props) {
   );
 }
 
-export default OwnerDashborad;
+export default PropertyBasicDetails;
