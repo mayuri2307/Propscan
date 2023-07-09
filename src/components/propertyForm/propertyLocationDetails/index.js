@@ -24,6 +24,12 @@ function PropertyOwnerFormPage2(props) {
               updateFormPage={props.updateFormPage}
               city={props.city}
               setCity={props.setCity}
+              locality={props.locality}
+              setLocality={props.setLocality}
+              house_number={props.house_number}
+              setHouse_Number={props.setHouse_Number}
+              locality_society={props.locality_society}
+                setLocality_Society={props.setLocality_Society}
             />
           </div>
         </div>

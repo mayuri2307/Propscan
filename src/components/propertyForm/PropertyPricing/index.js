@@ -21,7 +21,7 @@ export default function PropertyOwnerFormPage5(props) {
               <ProgressStepper formPageNum={props.formPageNum}></ProgressStepper>
             </div>
             <div class="col-10">
-              <PropertyPricing updateFormPage={props.updateFormPage} />
+              <PropertyPricing updateFormPage={props.updateFormPage}  handleSubmit={props.handleSubmit} />
             </div>
           </div>
         </div>
