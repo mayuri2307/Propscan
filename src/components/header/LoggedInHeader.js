@@ -1,4 +1,6 @@
-import React from 'react'
+import React from "react";
+import "./header.css";
+import SearchbarHeader from "../searchbar/SearchbarHeader";
 
 import "./header.css"
 

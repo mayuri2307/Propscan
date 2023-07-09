@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useState } from 'react';
 
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 import { SelectBox } from '../selectbox';
 import getFontData from '../../utils/getFontData';
@@ -82,5 +82,5 @@ export default function Searchbar({defaultClass="searchbar-setter"}) {
         <Col xs="0" md="1" lg="2"></Col>
       </Row>
     </div>
-  )
+  );
 }
