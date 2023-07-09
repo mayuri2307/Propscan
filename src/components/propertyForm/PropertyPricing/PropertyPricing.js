@@ -182,12 +182,29 @@ function PropertyPricing(props) {
           id="text"
           cols="80"
           rows="10"
-          style={{ marginLeft: "5vh" }}
+          style={{
+            marginLeft: "5vh",
+            color: "#0D2855",
+            fontFamily: "Poppins",
+            fontSize: "15px",
+            fontStyle: "normal",
+            fontWeight: "300",
+            lineHeight: "16px"}}
           placeholder="Share some details about your propery like spacious rooms,well maintained facilites.."
         />
         <p style={{ marginTop: "1vh" }} className="para_text3">
           Minimum 30 character required
         </p>
+      </div>
+      <div>
+        <button
+          type="submit"
+          className="button"
+          onClick={props.handleSubmit}
+          style={{ marginTop: "-1vh", marginLeft: "5vh" }}
+        >
+          Save
+        </button>
       </div>
     </div>
   );
