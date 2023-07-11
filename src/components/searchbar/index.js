@@ -59,11 +59,11 @@ export default function Searchbar({defaultClass="searchbar-setter"}) {
                   <div className='searchbar-text p-3 d-none d-lg-block'>
                     <br/>
                     <br/>
-                    <span className='searchbar-text-bold'>Buy</span>
-                    <span>Rent</span>
-                    <span>Commercial</span>
-                    <span>PG/Co-Living</span>
-                    <span>Plots</span>
+                    <span className='searchbar-text-bold me-4 me-xl-5'>Buy</span>
+                    <span className='me-4 me-xl-5'>Rent</span>
+                    <span className='me-4 me-xl-5'>Commercial</span>
+                    <span className='me-4 me-xl-5'>PG/Co-Living</span>
+                    <span className='me-4 me-xl-5'>Plots</span>
                   </div>
                 }
               </Col>

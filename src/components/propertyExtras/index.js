@@ -13,7 +13,7 @@ export default function PropertyExtras() {
     <div>
       <Row>
         <Col xs="0" md="1"></Col>
-        <Col>
+        <Col xs="12" md="8" className='px-4'>
           <div className='property-extra-bck'>
             <p style={{
               borderBottom: "1px solid #092C4C",

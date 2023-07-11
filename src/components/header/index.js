@@ -67,14 +67,14 @@ export default function Header() {
           </div>
           <div className="header-menu">
             <div className="px-3 px-lg-5 pb-2 pt-4">
-              <span style={{backgroundColor:"#E8F9FD", borderRadius:"38px", padding:"8px 20px", fontSize:"14px"}}>Log In/Sign Up</span>
+            <a href="/login" style={{textDecoration:"none", color:"inherit"}}><span style={{backgroundColor:"#E8F9FD", borderRadius:"38px", padding:"8px 20px", fontSize:"14px"}}>Log In/Sign Up</span></a>
               <div className="header-menu-icon float-end" onClick={toggleMenu}>
                 <div style={{backgroundColor: "#0D2855"}}></div>
                 <div style={{backgroundColor: "#0D2855"}}></div>
                 <div style={{backgroundColor: "#0D2855"}}></div>
               </div>
             </div>
-            <div>
+            <div className="pt-3">
               <hr/>
               <p>
                 Sell{" "} <img

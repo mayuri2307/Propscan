@@ -87,7 +87,7 @@
 }
 
 .header-menu hr{
-    background-color: #E8F9FD;
+    border: 1px solid #30cef2;
     margin: 6px;
     width: 100%;
 }
