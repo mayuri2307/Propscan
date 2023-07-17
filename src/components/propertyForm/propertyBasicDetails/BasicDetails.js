@@ -7,18 +7,6 @@ import DashBoardNavbar from "../DashboardNavbar/DashboardNavbar";
 // import { propscan_base_url } from "../../utils/Route";
 
 function PropertyBasicDetails(props) {
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   axios
-  //     .post(`${propscan_base_url}/property/create/type1`, { prlisting_type })
-  //     .then((res) => {
-  //       console.log(res);
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-  // };
-
   return (
     <div>
       <div

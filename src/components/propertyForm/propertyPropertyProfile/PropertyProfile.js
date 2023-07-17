@@ -209,7 +209,7 @@ function PropertyProfile(props) {
         <select
           name="feets"
           id="feets"
-          style={{ padding: "0", borderRadius: "30px", margin: "0px" }}
+          style={{  borderRadius: "30px", margin: "0px" }}
         >
           <option value="sq.ft">sq.ft</option>
           <option value="sq.yards">sq.yards</option>

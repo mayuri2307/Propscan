@@ -61,6 +61,7 @@ function PropertyLocationDetails(props) {
             name="City"
             onChange={(e) => props.setCity(e.target.value)}
             value={props.city}
+            onChange={(e) => props.setCity(e.target.value)}
             placeholder="Type here"
             aria-label="City"
             aria-describedby="basic-addon1"

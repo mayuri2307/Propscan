@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PropertyOwnerFormPage1 from "./propertyBasicDetails/index";
 import PropertyOwnerFormPage2 from "./propertyLocationDetails/index";
 import PropertyOwnerFormPage3 from "./propertyPropertyProfile/index";
@@ -16,6 +16,9 @@ function Index() {
   const [locality, setLocality] = useState();
   const [house_number, setHouse_number] = useState();
   const [city, setCity] = useState();
+  const [locality, setLocality] = useState();
+  const [locality_society, setLocality_Society] = useState();
+  const [house_number, setHouse_Number] = useState();
   const [bedrooms, setBedrooms] = useState();
   const [bathrooms, setBathrooms] = useState();
   const [balconies, setBalconies] = useState();
