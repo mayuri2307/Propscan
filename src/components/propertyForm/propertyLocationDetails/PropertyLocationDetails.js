@@ -59,8 +59,8 @@ function PropertyLocationDetails(props) {
           <input
             type="text"
             name="City"
-            onClick={(e) => props.setCity(e.target.city)}
             value={props.city}
+            onChange={(e) => props.setCity(e.target.value)}
             placeholder="Type here"
             aria-label="City"
             aria-describedby="basic-addon1"
@@ -94,6 +94,8 @@ function PropertyLocationDetails(props) {
           <input
             type="text"
             name="Apartment/Society"
+            value={props.locality_society}
+            onChange={(e)=>props.setLocality_Society(e.target.value)}
             placeholder="Type here"
             aria-label="Apartment/Society"
             style={{
@@ -124,6 +126,8 @@ function PropertyLocationDetails(props) {
           <input
             type="text"
             name="Locality"
+            value={props.locality}
+            onChange={(e)=>props.setLocality(e.target.value)}
             placeholder="Type here"
             aria-label="Locality"
             aria-describedby="basic-addon1"
@@ -154,6 +158,8 @@ function PropertyLocationDetails(props) {
           <input
             type="text"
             name="House.no(optional)"
+            value={props.house_number}
+            onChange={(e)=>props.setHouse_Number(e.target.value)}
             placeholder="Type here"
             aria-label=" House.no"
             aria-describedby="basic-addon1"
