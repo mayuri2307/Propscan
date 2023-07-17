@@ -40,9 +40,8 @@ function PropertyBasicDetails(props) {
         <Chip
           label="Sell"
           name="listing_type"
-          onClick={(e) => {
+          onClick={() => {
             props.setListing_Type("Sell");
-            // handleSubmit(e)
           }}
           variant={props.Listing_Type === "Sell" ? "default" : "outlined"}
           component="a"
@@ -59,7 +58,6 @@ function PropertyBasicDetails(props) {
         <Chip
           label="Rent / Lease"
           name="listing_type"
-          // onSubmit={handleSubmit}
           onClick={() => props.setListing_Type("Rent / Lease")}
           variant={
             props.listing_type === "Rent / Lease" ? "default" : "outlined"
@@ -95,19 +93,20 @@ function PropertyBasicDetails(props) {
       <div className="radio">
         <div className="form-check">
           <input
+            name="radio"
             className="form-check-input"
             type="radio"
-            name={props.property_sub_type}
+            checked={props.property_sub_type === 1}
             value={props.property_sub_type}
-            onClick={() => props.setProperty_sub_Type("Residential")}
+            onChange={() => props.setProperty_sub_Type(1)}
             id="flexRadioDefault1"
           />
           <label
             className="form-check-label"
-            htmlFor={props.property_sub_type}
             style={{
               color: "#0D2855",
             }}
+            htmlFor="radio"
           >
             Residential
           </label>
@@ -115,10 +114,11 @@ function PropertyBasicDetails(props) {
         <div className="form-check">
           <input
             className="form-check-input"
+            name="radio"
             type="radio"
-            name={props.property_sub_type}
+            checked={props.property_sub_type === 2}
             value={props.property_sub_type}
-            onClick={() => props.setProperty_sub_Type("Commercial")}
+            onChange={() => props.setProperty_sub_Type(2)}
             id="flexRadioDefault2"
           />
           <label
@@ -126,7 +126,7 @@ function PropertyBasicDetails(props) {
             style={{
               color: "#0D2855",
             }}
-            htmlFor={props.property_sub_type}
+            htmlFor="radio"
           >
             Commercial
           </label>
@@ -141,7 +141,10 @@ function PropertyBasicDetails(props) {
         <Stack direction="row" spacing={1} className="chip">
           <Chip
             label="Flat / Apartment"
-            onClick={() => props.setProperty_Type("Flat / Apartment")}
+            onClick={() => {
+              props.setProperty_Type("Flat / Apartment");
+              props.setType(1);
+            }}
             variant={
               props.property_type === "Flat / Apartment"
                 ? "default"
@@ -163,7 +166,10 @@ function PropertyBasicDetails(props) {
           />
           <Chip
             label="Independent House / villa"
-            onClick={() => props.setProperty_Type("Independent House / villa")}
+            onClick={() => {
+              props.setProperty_Type("Independent House / villa");
+              props.setType(1);
+            }}
             variant={
               props.property_type === "Independent House / villa"
                 ? "default"
@@ -187,9 +193,10 @@ function PropertyBasicDetails(props) {
         <Stack direction="row" cell spacing={1} className="chip1">
           <Chip
             label="Independent / Builder Floor"
-            onClick={() =>
-              props.setProperty_Type("Independent / Builder Floor")
-            }
+            onClick={() => {
+              props.setProperty_Type("Independent / Builder Floor");
+              props.setType(1);
+            }}
             variant={
               props.property_type === "Independent / Builder Floor"
                 ? "default"
@@ -211,7 +218,10 @@ function PropertyBasicDetails(props) {
           />
           <Chip
             label="Plot / Land"
-            onClick={() => props.setProperty_Type("Plot / Land")}
+            onClick={() => {
+              props.setProperty_Type("Plot / Land");
+              props.setType(3);
+            }}
             variant={
               props.property_type === "Plot / Land" ? "default" : "outlined"
             }
@@ -229,7 +239,10 @@ function PropertyBasicDetails(props) {
           />
           <Chip
             label="1 RK / Studio Apartment"
-            onClick={() => props.setProperty_Type("1 RK / Studio Apartment")}
+            onClick={() => {
+              props.setProperty_Type("1 RK / Studio Apartment");
+              props.setType(2);
+            }}
             variant={
               props.property_type === "1 RK / Studio Apartment"
                 ? "default"
@@ -253,7 +266,10 @@ function PropertyBasicDetails(props) {
         <Stack direction="row" cell spacing={1} className="chip2">
           <Chip
             label="Service Apartment"
-            onClick={() => props.setProperty_Type("Service Apartment")}
+            onClick={() => {
+              props.setProperty_Type("Service Apartment");
+              props.setType(2);
+            }}
             variant={
               props.property_type === "Service Apartment"
                 ? "default"
@@ -275,7 +291,10 @@ function PropertyBasicDetails(props) {
           />
           <Chip
             label="Farmhouse"
-            onClick={() => props.setProperty_Type("Farmhouse")}
+            onClick={() => {
+              props.setProperty_Type("Farmhouse");
+              props.setType(2);
+            }}
             variant={
               props.property_type === "Farmhouse" ? "default" : "outlined"
             }

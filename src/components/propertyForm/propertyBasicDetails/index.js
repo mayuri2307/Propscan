@@ -28,6 +28,8 @@ function PropertyOwner(props) {
               setProperty_sub_Type={props.setProperty_sub_Type}
               property_type={props.property_type}
               setProperty_Type={props.setProperty_Type}
+              type={props.type}
+              setType={props.setType}
             ></BasciDetails>
           </div>
         </div>
