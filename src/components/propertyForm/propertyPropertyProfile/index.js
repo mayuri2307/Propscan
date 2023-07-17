@@ -36,6 +36,8 @@ function PropertyOwnerFormPage3(props) {
               setAvailability_Status={props.setAvailability_Status}
               age_of_property={props.age_of_property}
               setAge_Of_Property={props.setAge_Of_Property}
+              total_floors={props.total_floors}
+              settotal_floors={props.settotal_floors}
             />
           </div>
         </div>

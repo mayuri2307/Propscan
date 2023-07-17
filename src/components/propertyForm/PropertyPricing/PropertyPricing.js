@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import "./PropertyPricing.css";
 import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 import AddIcon from "@mui/icons-material/Add";
 
 function PropertyPricing(props) {
-  const [selected, setSelected] = useState("");
   return (
     <div>
       <button
@@ -37,34 +36,25 @@ function PropertyPricing(props) {
         <Stack direction="row" spacing={1} className="chip4">
           <Chip
             label="Freehold"
-            onClick={() => setSelected("Freehold")}
-            variant={selected === "Freehold" ? "default" : "outlined"}
+            onClick={() => props.setownership_type("Freehold")}
+            variant={
+              props.ownership_type === "Freehold" ? "default" : "outlined"
+            }
             component="a"
             href="#basic-chip"
             clickable
             style={{
               marginTop: "-2vh",
               marginLeft: "4.5vh",
-              backgroundColor: selected === "Freehold" ? "#E8F9FD" : "white",
+              backgroundColor:
+                props.ownership_type === "Freehold" ? "#E8F9FD" : "white",
             }}
           />
           <Chip
             label="Leasehold"
-            onClick={() => setSelected("Leasehold")}
-            variant={selected === "Leasehold" ? "default" : "outlined"}
-            component="a"
-            href="#basic-chip"
-            clickable
-            style={{
-              marginTop: "-2vh",
-              backgroundColor: selected === "Leasehold" ? "#E8F9FD" : "white",
-            }}
-          />
-          <Chip
-            label="Co-operative society"
-            onClick={() => setSelected("Co-operative society")}
+            onClick={() => props.setownership_type("Leasehold")}
             variant={
-              selected === "Co-operative society" ? "default" : "outlined"
+              props.ownership_type === "Leasehold" ? "default" : "outlined"
             }
             component="a"
             href="#basic-chip"
@@ -72,20 +62,45 @@ function PropertyPricing(props) {
             style={{
               marginTop: "-2vh",
               backgroundColor:
-                selected === "Co-operative society" ? "#E8F9FD" : "white",
+                props.ownership_type === "Leasehold" ? "#E8F9FD" : "white",
             }}
           />
           <Chip
-            label="Power of Attorney"
-            onClick={() => setSelected("Power of Attorney")}
-            variant={selected === "Power of Attorney" ? "default" : "outlined"}
+            label="Co-operative society"
+            onClick={() => props.setownership_type("Co-operative society")}
+            variant={
+              props.ownership_type === "Co-operative society"
+                ? "default"
+                : "outlined"
+            }
             component="a"
             href="#basic-chip"
             clickable
             style={{
               marginTop: "-2vh",
               backgroundColor:
-                selected === "Power of Attorney" ? "#E8F9FD" : "white",
+                props.ownership_type === "Co-operative society"
+                  ? "#E8F9FD"
+                  : "white",
+            }}
+          />
+          <Chip
+            label="Power of Attorney"
+            onClick={() => props.setownership_type("Power of Attorney")}
+            variant={
+              props.ownership_type === "Power of Attorney"
+                ? "default"
+                : "outlined"
+            }
+            component="a"
+            href="#basic-chip"
+            clickable
+            style={{
+              marginTop: "-2vh",
+              backgroundColor:
+                props.ownership_type === "Power of Attorney"
+                  ? "#E8F9FD"
+                  : "white",
             }}
           />
         </Stack>
@@ -99,7 +114,8 @@ function PropertyPricing(props) {
         <div>
           <p className="para_text4">Expected Price</p>
           <input
-            // size="15"
+            value={props.expected_price}
+            onChange={(e) => props.setexpected_price(e.target.value)}
             type="text"
             placeholder="Rs. | Expected Price"
             style={{ padding: "1vh", marginLeft: "4vh" }}
@@ -108,7 +124,8 @@ function PropertyPricing(props) {
         <div>
           <p className="para_text4">Price per sq.ft</p>
           <input
-            // size="15"
+            value={props.price_per_sq_ft}
+            onChange={(e) => props.setprice_per_sq_ft(e.target.value)}
             type="text"
             placeholder="Rs. | Expected Price"
             style={{ padding: "1vh", marginLeft: "4vh" }}
@@ -118,6 +135,9 @@ function PropertyPricing(props) {
       <div style={{ marginLeft: "5vh" }}>
         <input
           type="checkbox"
+          checked={props.price_type === 1}
+          value={props.price_type}
+          onChange={() => props.setprice_type(1)}
           id="All inclusive price"
           name="All inclusive price"
         />
@@ -142,6 +162,9 @@ function PropertyPricing(props) {
         </svg>
         <input
           type="checkbox"
+          checked={props.price_type === 2}
+          value={props.price_type}
+          onChange={() => props.setprice_type(2)}
           id="Tax and Govt. changes excludes"
           name="Tax and Govt. changes excludes"
           style={{ marginLeft: "3vh" }}
@@ -156,8 +179,12 @@ function PropertyPricing(props) {
         </label>
         <input
           type="checkbox"
+          checked={props.price_type === 3}
+          value={props.price_type}
+          onChange={() => props.setprice_type(3)}
           id="All inclusive price"
           name="All inclusive price"
+          style={{ marginLeft: "1vh" }}
         />
 
         <label
@@ -179,6 +206,8 @@ function PropertyPricing(props) {
         </p>
         <textarea
           name="text"
+          onChange={(e) => props.setunique_description(e.target.value)}
+          value={props.unique_description}
           id="text"
           cols="80"
           rows="10"
@@ -200,10 +229,10 @@ function PropertyPricing(props) {
         <button
           type="submit"
           className="button"
-          onClick={props.handleSubmit}
-          style={{ marginTop: "-1vh", marginLeft: "5vh" }}
+          onClick={() => props.updateFormPage("increase")}
+          style={{ marginTop: "5vh", marginLeft: "2vh" }}
         >
-          Save
+          Continue
         </button>
       </div>
     </div>

@@ -28,9 +28,8 @@ function PropertyBasicDetails(props) {
         <Chip
           label="Sell"
           name="listing_type"
-          onClick={(e) => {
+          onClick={() => {
             props.setListing_Type("Sell");
-            // handleSubmit(e)
           }}
           variant={props.Listing_Type === "Sell" ? "default" : "outlined"}
           component="a"
@@ -47,7 +46,6 @@ function PropertyBasicDetails(props) {
         <Chip
           label="Rent / Lease"
           name="listing_type"
-          // onSubmit={handleSubmit}
           onClick={() => props.setListing_Type("Rent / Lease")}
           variant={
             props.listing_type === "Rent / Lease" ? "default" : "outlined"
@@ -83,19 +81,20 @@ function PropertyBasicDetails(props) {
       <div className="radio">
         <div className="form-check">
           <input
+            name="radio"
             className="form-check-input"
             type="radio"
-            name="property_sub_type"
+            checked={props.property_sub_type === 1}
             value={props.property_sub_type}
-            onChange={(e) => props.setProperty_sub_Type(e.target.value)}
+            onChange={() => props.setProperty_sub_Type(1)}
             id="flexRadioDefault1"
           />
           <label
             className="form-check-label"
-            htmlFor="property_sub_type"
             style={{
               color: "#0D2855",
             }}
+            htmlFor="radio"
           >
             Residential
           </label>
@@ -103,10 +102,11 @@ function PropertyBasicDetails(props) {
         <div className="form-check">
           <input
             className="form-check-input"
+            name="radio"
             type="radio"
-            name="property_sub_type"
+            checked={props.property_sub_type === 2}
             value={props.property_sub_type}
-            onChange={(e) => props.setProperty_sub_Type(e.target.value)}
+            onChange={() => props.setProperty_sub_Type(2)}
             id="flexRadioDefault2"
           />
           <label
@@ -114,7 +114,7 @@ function PropertyBasicDetails(props) {
             style={{
               color: "#0D2855",
             }}
-            htmlFor="property_sub_type"
+            htmlFor="radio"
           >
             Commercial
           </label>

@@ -406,7 +406,8 @@ function PropertyProfile(props) {
             Total Floors
             <input
               type="text"
-              // class="form-control"
+              value={props.total_floors}
+              onChange={(e) => props.settotal_floors(e.target.value)}
               placeholder="Type here"
               aria-label="state"
               aria-describedby="basic-addon1"

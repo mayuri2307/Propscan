@@ -32,6 +32,10 @@ const steps = [
     label: "Pricing & Others",
     description: " Step 5",
   },
+  {
+    label: "Amenties",
+    description: " Step 6",
+  },
 ];
 
 export default function VerticalLinearStepper(props) {

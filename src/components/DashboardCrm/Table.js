@@ -22,7 +22,7 @@ const rows = [
   createData(
     "Property name/Address",
     "Bathinda",
-    "Listed",
+    "Punjab",
     "1 Jan 2023",
     "Sell",
     "Rs. 123456789"
@@ -31,7 +31,7 @@ const rows = [
   createData(
     "Property name/Address",
     "Gurugram",
-    "Qualified",
+    "Haryana",
     "1 Jan 2023",
     "Rent",
     "Rs. 123456789"
@@ -39,23 +39,7 @@ const rows = [
   createData(
     "Property name/Address",
     "Jaipur",
-    "Negotiation",
-    "1 Jan 2023",
-    "Lease",
-    "Rs. 123456789"
-  ),
-  createData(
-    "Property name/Address",
-    "Jaipur",
-    "Negotiation",
-    "1 Jan 2023",
-    "Lease",
-    "Rs. 123456789"
-  ),
-  createData(
-    "Property name/Address",
-    "Jaipur",
-    "Negotiation",
+    "Rajasthan",
     "1 Jan 2023",
     "Lease",
     "Rs. 123456789"
@@ -64,7 +48,7 @@ const rows = [
 
 export default function BasicTable() {
   return (
-    <TableContainer component={Paper} style={{ marginLeft: "11vh" }}>
+    <TableContainer component={Paper} style={{ marginTop: "-1vh" }}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
