@@ -32,11 +32,12 @@ function Login(props) {
       phone_number: phone_no,
     })
     .then((res) =>{
-      setSevAlert("success")
-      setMsgAlert("OTP sent succesfully")
+      setSevAlert("error")
+      setMsgAlert("Error while sending OTP")
       setOpenAlert(true)
     })
     .catch((err) => {
+      console.log(err)
       setSevAlert("error")
       setMsgAlert(err.response.data.error)
       setOpenAlert(true)
@@ -58,7 +59,7 @@ function Login(props) {
     window.addEventListener('resize', handleResizeImage)
     handleResizeImage()
   })
-
+  console.log(msgAlert)
   return (
     <div class="row login">
       <div style={{padding:0, display:"flex", alignItems:"center",justifyContent:"center"}}>
@@ -121,7 +122,7 @@ function Login(props) {
           </div>
           <div style={{ textAlign: "center", marginBottom: "0.6vh" , paddingTop:"42px" }}>
           <button className="btn1" type="submit" onClick={handleChange}>
-            CONFIRM
+            GENERATE OTP
           </button>
         </div>
           </form>
