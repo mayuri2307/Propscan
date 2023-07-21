@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import Chart from "./Chart";
 import CircularBar from "./CircularBar";
 import Table from "./Table";
-import PropertyItem from "../properties/carousel/PropertyItem";
+import PropertyItem from "../properties/PropertyItem";
 import Col from "react-bootstrap/Col";
 
 function DashBoardHome() {
