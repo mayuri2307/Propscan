@@ -15,7 +15,7 @@ function SignUp(props) {
       {
         signupType === 'customer' ? <Customer handleBack={handleBack}/>
         :
-        signupType === 'broker' ? <Owner />
+        signupType === 'broker' ? <Owner handleBack={handleBack}/>
         :
         <div class="row login">
         <div

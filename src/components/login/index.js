@@ -10,7 +10,7 @@ function LoginHome() {
   }
   return (
     <div>
-      {loginType === 'login' ? <Login />
+      {loginType === 'login' ? <Login handleBack = {handleBack} />
         :
       loginType === 'signup' ? <Signup handleBack = {handleBack} />
         :
