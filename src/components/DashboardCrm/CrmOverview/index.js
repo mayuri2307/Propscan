@@ -1,11 +1,10 @@
 import React from "react";
-import LoggedInHeader from "../header/LoggedInHeader";
-import DashBoardNavbar from "../propertyForm/DashboardNavbar/DashboardNavbar";
-import CmaNavbar from "./CmaNavbar/CmaNavbar";
-import DashboardCma from "./DashboardCma"
+import LoggedInHeader from "../../header/LoggedInHeader";
+import DashBoardNavbar from "../../propertyForm/DashboardNavbar/DashboardNavbar";
+import CrmNavbar from "../CrmNavbar/CrmNavbar";
+import CrmCard from "../Card/CrmCard";
 
-
-function index() {
+function CrmOverview() {
   return (
     <div>
       <LoggedInHeader></LoggedInHeader>
@@ -17,10 +16,10 @@ function index() {
       <div>
         <div className="row">
           <div className="col-2">
-            <CmaNavbar></CmaNavbar>
+            <CrmNavbar></CrmNavbar>
           </div>
           <div class="col" style={{ marginLeft: "5vh" }}>
-            <DashboardCma/>
+            <CrmCard></CrmCard>
           </div>
         </div>
       </div>
@@ -28,4 +27,4 @@ function index() {
   );
 }
 
-export default index;
+export default CrmOverview;

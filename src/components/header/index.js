@@ -1,5 +1,4 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import "./header.css";
 
 import Searchbar from "../searchbar";
@@ -32,10 +31,12 @@ export default function Header() {
             <img
               style={{ width: "60px", height: "auto" }}
               src="images/logo.png"
+              alt="not found"
             />
             <img
               style={{ width: "90px", height: "auto" }}
               src="images/propscan.png"
+              alt="not found"
             />
             <span className="header-com">.com</span>
           </div>
@@ -44,6 +45,7 @@ export default function Header() {
               Sell{" "}
               <img
                 src="images/img_checkmark.svg"
+                alt="not found"
                 style={{ paddingBottom: "2px" }}
               />
             </span>
@@ -51,6 +53,7 @@ export default function Header() {
               Buy{" "}
               <img
                 src="images/img_checkmark.svg"
+                alt="not found"
                 style={{ paddingBottom: "2px" }}
               />
             </span>
@@ -79,6 +82,7 @@ export default function Header() {
               <p>
                 Sell{" "} <img
                   src="images/img_checkmark.svg"
+                  alt="not found"
                   style={{ paddingBottom: "2px", filter: "invert(34%) sepia(10%) saturate(6025%) hue-rotate(177deg) brightness(28%) contrast(99%)" }}
                 />
               </p>
@@ -86,6 +90,7 @@ export default function Header() {
               <p>
                 Buy{" "} <img
                   src="images/img_checkmark.svg"
+                  alt="not found"
                   style={{ paddingBottom: "2px", filter: "invert(34%) sepia(10%) saturate(6025%) hue-rotate(177deg) brightness(28%) contrast(99%)" }}
                 />
               </p>

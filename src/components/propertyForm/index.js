@@ -12,13 +12,13 @@ function Index() {
   const [listing_type, setListing_Type] = useState();
   const [property_sub_type, setProperty_sub_Type] = useState();
   const [property_type, setProperty_Type] = useState();
-  const [locality_society, setLocality_Society] = useState();
-  const [locality, setLocality] = useState();
+  // const [locality_society, setLocality_Society] = useState();
+  // const [locality, setLocality] = useState();
   const [house_number, setHouse_number] = useState();
   const [city, setCity] = useState();
   const [locality, setLocality] = useState();
   const [locality_society, setLocality_Society] = useState();
-  const [house_number, setHouse_Number] = useState();
+  // const [house_number, setHouse_Number] = useState();
   const [bedrooms, setBedrooms] = useState();
   const [bathrooms, setBathrooms] = useState();
   const [balconies, setBalconies] = useState();

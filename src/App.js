@@ -19,6 +19,9 @@ import CrmMeetingScheduled from "./pages/CrmMeetingScheduled";
 import CrmQuotationSent from "./pages/CrmQuotationSent";
 import CrmNegotiation from "./pages/CrmNegotiation";
 import CrmSold from "./pages/CrmSold";
+import CrmUnlisted from "./pages/CrmUnlisted";
+import CrmArchived from "./pages/CrmArchived";
+import CrmOverview from "./pages/CrmOverview";
 
 function App() {
   return (
@@ -72,9 +75,18 @@ function App() {
           path="/properties-dashboard/crm/negotiation"
           element={<CrmNegotiation />}
         />
+        <Route path="/properties-dashboard/crm/sold" element={<CrmSold />} />
         <Route
-          path="/properties-dashboard/crm/sold"
-          element={<CrmSold />}
+          path="/properties-dashboard/crm/unlisted"
+          element={<CrmUnlisted />}
+        />
+        <Route
+          path="/properties-dashboard/crm/archived"
+          element={<CrmArchived />}
+        />
+        <Route
+          path="/properties-dashboard/crm/overview"
+          element={<CrmOverview />}
         />
       </Routes>
     </BrowserRouter>
