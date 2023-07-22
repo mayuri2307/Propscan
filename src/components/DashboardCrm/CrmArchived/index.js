@@ -36,7 +36,7 @@ const sortByList = [
   },
 ];
 
-function CrmSold() {
+function CrmArchived() {
   return (
     <div>
       <LoggedInHeader></LoggedInHeader>
@@ -53,7 +53,7 @@ function CrmSold() {
           <div className="col" style={{ marginLeft: "5vh" }}>
             <div style={{ display: "flex", marginLeft: "-6vh" }}>
               <p className="square" style={{ backgroundColor: "#EB0000" }}></p>
-              <p className="listedPara">Sold</p>
+              <p className="listedPara">Archived</p>
             </div>
             <div
               style={{
@@ -263,4 +263,4 @@ function CrmSold() {
   );
 }
 
-export default CrmSold;
+export default CrmArchived;
