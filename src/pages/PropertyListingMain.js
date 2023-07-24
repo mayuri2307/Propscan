@@ -3,10 +3,11 @@ import { Link } from 'react-router-dom';
 
 import LoggedInHeader from '../components/header/LoggedInHeader';
 import PropertyListingFilters from '../components/filters/PropertyListingFilters';
-import PropertyListing from '../components/properties/PropertyListing'
+import PropertyListing from '../components/property/PropertyListing'
 import getFontData from '../utils/getFontData';
+import Footer from '../components/footer';
 
-export default function PropertyListingHome() {
+export default function PropertyListingMain() {
   const [propType, setPropType] = useState("");
   const [bhkType, setBhkType] = useState("");
   const [saleType, setSaleType] = useState("");
@@ -30,6 +31,7 @@ export default function PropertyListingHome() {
                 <img
                     style={{ width: "60px", height: "auto" }}
                     src="images/logo.png"
+                    alt="img"
                 />
                 <span style={{paddingLeft:"12px", ...getFontData("16px", "500", {color:"#2B2B2B"})}}>PROPSCAN</span>
                 <span style={getFontData("16px", "500", {color:"#2B2B2B"})}>.com</span>
@@ -62,6 +64,7 @@ export default function PropertyListingHome() {
           rera={rera}
           sortBy={sortBy}
         />
+        <Footer />
     </div>
   )
 }

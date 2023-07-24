@@ -46,19 +46,12 @@ export default function Header() {
           </div>
           <div className="header-items">
             <span className="px-4 px-lg-5">
-              {/* Sell{" "}
+              Sell{" "}
               <img
                 src="images/img_checkmark.svg"
-                alt="not found"
                 style={{ paddingBottom: "2px" }}
                 alt="img"
-              /> */}
-              <SelectBox
-                className="font-medium text-blue_gray_900 text-left text-sm w-[9%] md:w-full"
-                placeholderClassName="text-blue_gray_900"
-                isMulti={false}
-                name="group105"
-            />
+              />
             </span>
             <span className="px-4 px-lg-5">
               Buy{" "}

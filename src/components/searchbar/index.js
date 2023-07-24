@@ -67,8 +67,8 @@ export default function Searchbar({defaultClass="searchbar-setter"}) {
               <Col xs="8" sm="9" style={{borderLeft: "1px solid #0D2855", position:"relative"}} className='my-auto'>
                 <div style={{zIndex:"2", display:"flex"}}>
                   <div style={{flexGrow:"100"}}>
-                    {/* <input className='searchbar-input' value={squery} onClick={() => setShowSuggestions(true)} onChange={(e) => setSquery(e.target.value)} placeholder={ window.innerWidth > 650 ? "Search for loacality, Landmark, Project or Builder":"Type here"} /> */}
-                    <SelectBox
+                    <input className='searchbar-input' value={squery} onClick={() => setShowSuggestions(true)} onChange={(e) => setSquery(e.target.value)} placeholder={ window.innerWidth > 650 ? "Search for loacality, Landmark, Project or Builder":"Type here"} />
+                    {/* <SelectBox
                     className="font-medium text-blue_gray_900 text-left text-sm w-[9%] md:w-full"
                     placeholderClassName="text-blue_gray_900"
                     isMulti={true}
@@ -80,7 +80,7 @@ export default function Searchbar({defaultClass="searchbar-setter"}) {
                     // onChange={(val) => {
                     //   setCity(val);
                     // }}
-                />
+                /> */}
                   </div>
                   <button className='btn-info float-end px-2 py-1' onClick={fetchProperties}><span className='expert-btn-text px-1 px-lg-3'>Search</span></button>
                   {showSuggestions && <div className='search-suggestions'>

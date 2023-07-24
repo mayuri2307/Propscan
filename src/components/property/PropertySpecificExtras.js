@@ -3,12 +3,12 @@ import React from 'react'
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-import PropertyItem from "../properties/PropertyItem";
-import Carousel from '../utils/carousel/Carousel';
+import PropertyCardSmall from "../property/PropertyCardSmall";
+import Carousel from '../utils/carousel';
 
 import getFontData from '../../utils/getFontData';
 
-export default function PropertyExtras() {
+export default function PropertySpecificExtras() {
   return (
     <div>
       <Row>
@@ -22,7 +22,7 @@ export default function PropertyExtras() {
             }}>Similar Properties</p>
             <Carousel slides={2} responsive={[[1400, 2], [1024, 2], [780, 1]]} items={[
               <div className='p-2'>
-                <PropertyItem
+                <PropertyCardSmall
                   src="images/property_3.png"
                   text="0123 Boulevard Street, New Delhi"
                   subText1="3 Bedrooms | 2 Bathrooms |"
@@ -31,7 +31,7 @@ export default function PropertyExtras() {
                 />
               </div>,
               <div className='p-2'>
-                <PropertyItem
+                <PropertyCardSmall
                   src="images/property_4.png"
                   text="0123 Boulevard Street, New Delhi"
                   subText1="3 Bedrooms | 2 Bathrooms |"
@@ -50,7 +50,7 @@ export default function PropertyExtras() {
             }}>Owner Listing Near Dwarka</p>
             <Carousel slides={2} responsive={[[1400, 2], [1024, 2], [780, 1]]} items={[
               <div className='p-2'>
-                <PropertyItem
+                <PropertyCardSmall
                   src="images/property_5.png"
                   text="0123 Boulevard Street, New Delhi"
                   subText1="3 Bedrooms | 2 Bathrooms |"
@@ -59,7 +59,7 @@ export default function PropertyExtras() {
                 />
               </div>,
               <div className='p-2'>
-                <PropertyItem
+                <PropertyCardSmall
                   src="images/property_8.png"
                   text="0123 Boulevard Street, New Delhi"
                   subText1="3 Bedrooms | 2 Bathrooms |"
@@ -78,7 +78,7 @@ export default function PropertyExtras() {
             }}>Recently added near Dwarka</p>
             <Carousel slides={2} responsive={[[1400, 2], [1024, 2], [780, 1]]} items={[
               <div className='p-2'>
-                <PropertyItem
+                <PropertyCardSmall
                   src="images/property_7.png"
                   text="0123 Boulevard Street, New Delhi"
                   subText1="3 Bedrooms | 2 Bathrooms |"
@@ -87,7 +87,7 @@ export default function PropertyExtras() {
                 />
               </div>,
               <div className='p-2'>
-                <PropertyItem
+                <PropertyCardSmall
                   src="images/property_8.png"
                   text="0123 Boulevard Street, New Delhi"
                   subText1="3 Bedrooms | 2 Bathrooms |"
@@ -106,7 +106,7 @@ export default function PropertyExtras() {
             }}>More Projects near Dwarka</p>
             <Carousel slides={2} responsive={[[1400, 2], [1024, 2], [780, 1]]} items={[
               <div className='p-2'>
-                <PropertyItem
+                <PropertyCardSmall
                   src="images/property_9.png"
                   text="0123 Boulevard Street, New Delhi"
                   subText1="3 Bedrooms | 2 Bathrooms |"
@@ -115,7 +115,7 @@ export default function PropertyExtras() {
                 />
               </div>,
               <div className='p-2'>
-                <PropertyItem
+                <PropertyCardSmall
                   src="images/property_10.png"
                   text="0123 Boulevard Street, New Delhi"
                   subText1="3 Bedrooms | 2 Bathrooms |"

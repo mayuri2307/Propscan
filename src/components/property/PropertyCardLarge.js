@@ -1,12 +1,8 @@
 import React from 'react'
 
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-// import { Img, List, SelectBox, Text } from "components";
-
 import "./properties.css"
 
-export default function PropertyListCard(props) {
+export default function PropertyCardLarge(props) {
     return (
       <div style={{display:"flex", justifyContent:"center"}}>
             <img src={props.propertyImage} alt="property" height={"auto"} width={"20%"}/>

@@ -1,6 +1,5 @@
 import React from "react";
 import Select from "react-select";
-import PropTypes from "prop-types";
 
 const variants = {
   OutlineBluegray900: "outline outline-[0.5px] outline-blue_gray_900",
@@ -28,8 +27,6 @@ const SelectBox = (
     }
   ) => {
     const [selectedVal, setSelectedVal] = React.useState(value);
-    console.log("ds"+value);
-    console.log(onChange)
     const handleChange = (data) => {
       setSelectedVal(data);
       console.log(data)

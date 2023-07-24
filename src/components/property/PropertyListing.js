@@ -3,8 +3,8 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useLocation } from 'react-router-dom';
 
-import PropertyListCard from './PropertyListCard';
-import PropertyItem from './PropertyItem';
+import PropertyCardLarge from './PropertyCardLarge';
+import PropertyCardSmall from './PropertyCardSmall';
 import getFormatedRate from '../../utils/money';
 
 import Row from 'react-bootstrap/Row';
@@ -213,7 +213,7 @@ export default function PropertyListing(props) {
             <div className="d-none d-md-block">
                 {properties.length>0?properties.map((props, index) =>
                     <div className='properties' key={index} onClick={() => navigate("/property")}>
-                        <PropertyListCard {...props}  />
+                        <PropertyCardLarge {...props}  />
                     </div>
                 ): <p className='text-center p-5'>Duhh, There is no property to display :(</p>}
             </div>
@@ -225,7 +225,7 @@ export default function PropertyListing(props) {
                             <Col xs="10" className='mb-4'
                                 onClick={() => navigate("/property")}
                             >
-                                <PropertyItem
+                                <PropertyCardSmall
                                     src={props.propertyImage}
                                     text={props.name}
                                     subText1={props.dealerName}

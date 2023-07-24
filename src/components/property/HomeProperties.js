@@ -3,11 +3,11 @@ import React from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-import PropertyItem from "./PropertyItem";
+import PropertyItem from "./PropertyCardSmall";
 
-import Carousel from '../utils/carousel/Carousel';
+import Carousel from '../utils/carousel';
 
-export default function Properties() {
+export default function HomeProperties() {
     return (
         <div>
             <p className='top text-center m-0'><span className='f-bold'>Properties</span> for Sale</p>

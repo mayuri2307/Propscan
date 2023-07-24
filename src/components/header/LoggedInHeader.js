@@ -8,9 +8,6 @@ import "./header.css"
 import Searchbar from '../searchbar'
 import getFontData from '../../utils/getFontData'
 
-import Searchbar from "../searchbar";
-import getFontData from "../../utils/getFontData";
-
 export default function LoggedInHeader() {
     return (
         <div className='logged-in-header px-4'>
