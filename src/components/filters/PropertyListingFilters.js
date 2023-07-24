@@ -9,19 +9,26 @@ import "../propertyInfo/propertyInfo.css"
 import { SelectBox } from '../selectbox';
 
 const propertyTypeOptionsList = [
-    { label: "Option1", value: "option1" },
-    { label: "Option2", value: "option2" },
-    { label: "Option3", value: "option3" },
+    { label: "Apartment", value: "apartment" },
+    { label: "Independent House", value: "independent house" },
+    { label: "Independent Floor", value: "independent floor" },
+    { label: "Plot", value: "plot" },
+    { label: "Studio", value: "studio" },
+    { label: "Duplex", value: "duplex" },
+    { label: "Penthouse", value: "penthouse" },
+    { label: "Villa", value: "villa" },
+    { label: "Agriculture Land", value: "agriculture land" },
   ];
   const bhkTypeOptionsList = [
-    { label: "Option1", value: "option1" },
-    { label: "Option2", value: "option2" },
-    { label: "Option3", value: "option3" },
+    { label: "1 RK", value: "1 rk" },
+    { label: "1 BHK", value: "1 bhk" },
+    { label: "2 BHK", value: "2 bhk" },
+    { label: "3 BHK", value: "3 bhk" },
+    { label: "3+ BHK", value: "3+ bhk" }
   ];
   const saleTypeOptionsList = [
-    { label: "Option1", value: "option1" },
-    { label: "Option2", value: "option2" },
-    { label: "Option3", value: "option3" },
+    { label: "New", value: "new" },
+    { label: "Resale", value: "resale" }
   ];
   const budgetOptionsList = [
     { label: "Option1", value: "option1" },
@@ -34,29 +41,35 @@ const propertyTypeOptionsList = [
     { label: "Option3", value: "option3" },
   ];
   const amenitiesOptionsList = [
-    { label: "Option1", value: "option1" },
-    { label: "Option2", value: "option2" },
-    { label: "Option3", value: "option3" },
+    { label: "Parking", value: "Parking" },
+    { label: "Park", value: "Park" },
+    { label: "Lift", value: "Lift" },
+    { label: "Power Backup", value: "Power Backup" },
+    { label: "Gymnasium", value: "Gymnasium" },
+    { label: "Club House", value: "Club House" },
+    { label: "Swimming Pool", value: "Swimming Pool" },
+    { label: "Gas Pipeline", value: "Gas Pipeline" },
+    { label: "Security Personnel", value: "Security Personnel" },
   ];
   const furnishingStatusOptionsList = [
-    { label: "Option1", value: "option1" },
-    { label: "Option2", value: "option2" },
-    { label: "Option3", value: "option3" },
+    { label: "Semi-Furnished", value: "Semi-Furnished" },
+    { label: "Unfurnished", value: "Unfurnished" },
+    { label: "Furnished", value: "Furnished" },
   ];
   const postedByOptionsList = [
-    { label: "Option1", value: "option1" },
-    { label: "Option2", value: "option2" },
-    { label: "Option3", value: "option3" },
+    { label: "Owner", value: "Owner" },
+    { label: "Builder", value: "Builder" },
+    { label: "Dealer", value: "Dealer" },
   ];
   const possessionStateOptionsList = [
-    { label: "Option1", value: "option1" },
-    { label: "Option2", value: "option2" },
-    { label: "Option3", value: "option3" },
+    { label: "Ready to move", value: "Ready to move" },
+    { label: "In 1 Year", value: "In 1 Year" },
+    { label: "In 3 Years", value: "In 3 Years" },
+    { label: "Beyond 3 Years", value: "Beyond 3 Years" },
   ];
-  const languageOptionsList = [
-    { label: "Option1", value: "option1" },
-    { label: "Option2", value: "option2" },
-    { label: "Option3", value: "option3" },
+  const reraOptionsList = [
+    { label: "+ Rera Approved Properties", value: "+ Rera Approved Properties" },
+    { label: "+ Rera Registered Dealers", value: "+ Rera Registered Dealers" }
   ];
 
   const sortByList = [
@@ -90,7 +103,7 @@ const propertyTypeOptionsList = [
     },
   ]
 
-export default function PropertyListingFilters() {
+export default function PropertyListingFilters(props) {
     return (
       <div className='d-none d-md-block'>
         <div className='properties-filter'>
@@ -100,6 +113,8 @@ export default function PropertyListingFilters() {
                 isMulti={false}
                 name="group105"
                 options={propertyTypeOptionsList}
+                value={props["propType"]}
+                onChange={props["setPropType"]}
                 isSearchable={false}
                 placeholder="Property Type"
             />
@@ -109,6 +124,8 @@ export default function PropertyListingFilters() {
                 isMulti={false}
                 name="group108"
                 options={bhkTypeOptionsList}
+                value={props["bhkType"]}
+                onChange={props["setBhkType"]}
                 isSearchable={false}
                 placeholder="BHK type"
             />
@@ -118,6 +135,8 @@ export default function PropertyListingFilters() {
                 isMulti={false}
                 name="group109"
                 options={saleTypeOptionsList}
+                value={props["saleType"]}
+                onChange={props["setSaleType"]}
                 isSearchable={false}
                 placeholder="Sale type"
             />
@@ -128,6 +147,8 @@ export default function PropertyListingFilters() {
                 isMulti={false}
                 name="group110"
                 options={budgetOptionsList}
+                value={props["budgetType"]}
+                onChange={props["setBudgetType"]}
                 isSearchable={false}
                 placeholder="Budget"
             />
@@ -137,6 +158,8 @@ export default function PropertyListingFilters() {
                 isMulti={false}
                 name="group112"
                 options={areaOptionsList}
+                value={props["areaType"]}
+                onChange={props["setAreaType"]}
                 isSearchable={false}
                 placeholder="Area"
             />
@@ -146,6 +169,8 @@ export default function PropertyListingFilters() {
                 isMulti={false}
                 name="group113"
                 options={amenitiesOptionsList}
+                value={props["amenitiesType"]}
+                onChange={props["setAmenitiesType"]}
                 isSearchable={false}
                 placeholder="Amenities"
             />
@@ -155,6 +180,8 @@ export default function PropertyListingFilters() {
                 isMulti={false}
                 name="group114"
                 options={furnishingStatusOptionsList}
+                value={props["furnishingType"]}
+                onChange={props["setFurnishingType"]}
                 isSearchable={false}
                 placeholder="Furnishing Status"
             />
@@ -164,6 +191,8 @@ export default function PropertyListingFilters() {
                 isMulti={false}
                 name="group111"
                 options={postedByOptionsList}
+                value={props["postedBy"]}
+                onChange={props["setPostedBy"]}
                 isSearchable={false}
                 placeholder="Posted by"
             />
@@ -173,6 +202,8 @@ export default function PropertyListingFilters() {
                 isMulti={false}
                 name="group115"
                 options={possessionStateOptionsList}
+                value={props["possession"]}
+                onChange={props["setPossession"]}
                 isSearchable={false}
                 placeholder="Possession State"
             />
@@ -181,7 +212,9 @@ export default function PropertyListingFilters() {
                 placeholderClassName="text-blue_gray_900"
                 isMulti={false}
                 name="language"
-                options={languageOptionsList}
+                options={reraOptionsList}
+                value={props["rera"]}
+                onChange={props["setRera"]}
                 isSearchable={false}
                 placeholder="RERA  Approved"
             />
@@ -194,6 +227,8 @@ export default function PropertyListingFilters() {
                 isMulti={false}
                 name="sortby"   
                 options={sortByList}
+                value={props["sortBy"]}
+                onChange={props["setSortBy"]}
                 isSearchable={false}
                 placeholder="Relevance"
             />

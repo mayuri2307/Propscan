@@ -11,14 +11,14 @@ export default function PropertyListCard(props) {
       <div style={{display:"flex", justifyContent:"center"}}>
             <img src={props.propertyImage} alt="property" height={"auto"} width={"20%"}/>
             <div className='property-list-card'>
-                <div class="row">
-                    <div class="col-8 property-name">
+                <div className="row">
+                    <div className="col-8 property-name">
                         {props.name}
                     </div>
-                    <div class="col">
+                    <div className="col">
                         <div className="property-batch">RERA </div>
                     </div>
-                    <div class="col-2">
+                    <div className="col-2">
                         <div style={{display:"flex", justifyContent:"flex-end"}}>
                             <div className="info-icon">
                                 <img src="/images/HeartStraight.png" alt="" />
@@ -29,18 +29,18 @@ export default function PropertyListCard(props) {
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col property-desc">
-                    2,3 BHK Independent Floor in Dwarka, Delhi
+                <div className="row">
+                    <div className="col property-desc">
+                    {props.unique_description}
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col property-name" style={{marginTop:"2%"}}>
+                <div className="row">
+                    <div className="col property-name" style={{marginTop:"2%"}}>
                         {props.priceRate}
                     </div>
                 </div>
-                <div class="row  property-detail">
-                    <div class="col-5" style={{padding:"15px"}}>
+                <div className="row  property-detail">
+                    <div className="col-5" style={{padding:"15px"}}>
                         <div className='property-body'>
                             Avg. Price
                         </div>
@@ -48,10 +48,10 @@ export default function PropertyListCard(props) {
                             {props.avgPrice}
                         </div>
                     </div>
-                    <div class="col" style={{padding:"10px 0"}}>
+                    <div className="col" style={{padding:"10px 0"}}>
                         <div className='divider'/>
                     </div>
-                    <div class="col-6"  style={{padding:"15px"}}>
+                    <div className="col-6"  style={{padding:"15px"}}>
                         <div className='property-body'>
                             Possession Starts
                         </div>
@@ -61,17 +61,17 @@ export default function PropertyListCard(props) {
                     </div>
                 </div>
                 <br/><br/>
-                <div class="row">
-                    <div class="col" >
+                <div className="row">
+                    <div className="col" >
                         <div className='horizontal-divider'></div>
                     </div>
                 </div>
-                <div class="row" style={{marginTop:"15px"}}>
-                    <div class="col-10" >
+                <div className="row" style={{marginTop:"15px"}}>
+                    <div className="col-10" >
                         <div className='property-name'>{props.dealerName}</div> 
                         <div className='property-body'>Seller/Dealer</div>
                     </div>
-                    <div class="col-2" >
+                    <div className="col-2" >
                     <button className='btn-info float-end '><span className='expert-btn-text px-1' style={{fontSize:"16px"}}>Contact</span></button>
                     </div>
                 </div>
