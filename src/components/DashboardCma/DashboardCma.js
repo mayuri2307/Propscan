@@ -1,7 +1,7 @@
 import React from "react";
 import { SelectBox } from "../selectbox/index";
-import PropertyListCard from "../properties/PropertyListCard";
-import PropertyItem from "../properties/PropertyItem";
+import PropertyCardLarge from "../property/PropertyCardLarge";
+import PropertyCardSmall from "../property/PropertyCardSmall";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
@@ -133,7 +133,7 @@ function DashboardCma() {
               key={index}
               //   onClick={() => navigate("/property")}
             >
-              <PropertyListCard {...props} />
+              <PropertyCardLarge {...props} />
             </div>
           ))}
         </div>
@@ -148,7 +148,7 @@ function DashboardCma() {
                   className="mb-4"
                   //   onClick={() => navigate("/property")}
                 >
-                  <PropertyItem
+                  <PropertyCardSmall
                     src={props.propertyImage}
                     text={props.name}
                     subText1={props.dealerName}

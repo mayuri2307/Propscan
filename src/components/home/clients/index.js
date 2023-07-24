@@ -3,7 +3,7 @@ import React from 'react'
 import Row from 'react-bootstrap/Row';
 import Col from "react-bootstrap/Col";
 
-import Carousel from '../utils/carousel/Carousel';
+import Carousel from '../../utils/carousel';
 import "./client.css"
 
 export default function Clients() {

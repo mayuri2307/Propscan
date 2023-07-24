@@ -52,9 +52,9 @@ export default function Carousel({items, slides=3, responsive=[[1024,3], [800,2]
     return (
         <div>
             <Slider {...settings}>
-                {items.map((item) => {
+                {items.map((item, index) => {
                     return (
-                        <div className="carousel-item">
+                        <div className="carousel-item" key={index}>
                             {item}
                         </div>
                     )

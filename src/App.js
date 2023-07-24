@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./assets/App.css";
 import Home from "./pages/Home";
-import Property from "./pages/Property";
-import PropertyListingHome from "./pages/PropertyListingHome";
+import SingleProperty from "./pages/SingleProperty";
+import PropertyListingMain from "./pages/PropertyListingMain";
 import Login from "./pages/Login";
 import PropertyForm from "./pages/propertyForm";
 import DashBoardHome from "./pages/DashboardHome";
@@ -28,8 +28,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/properties" element={<PropertyListingHome />} />
-        <Route path="/property" element={<Property />} />
+        <Route path="/properties" element={<PropertyListingMain />} />
+        <Route path="/property" element={<SingleProperty />} />
         <Route path="/login" element={<Login />} />
         <Route path="/new-property-form" element={<PropertyForm />} />
         <Route path="/properties-dashboard/home" element={<DashBoardHome />} />

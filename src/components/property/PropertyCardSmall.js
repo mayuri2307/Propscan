@@ -2,7 +2,7 @@ import React from "react";
 
 import "./propertyCarousel.css";
 
-export default function PropertyItem({ src, text, subText1, subText2, price }) {
+export default function PropertyCardSmall({ src, text, subText1, subText2, price }) {
   return (
     <div className="p-item">
       <div style={{ position: "relative" }}>
@@ -21,7 +21,6 @@ export default function PropertyItem({ src, text, subText1, subText2, price }) {
         <div style={{ position: "absolute", bottom: "4%", right: "2%" }}>
           <button className="like p-1">
             <img src="/images/heart.svg" alt="not found" />
-            
           </button>
         </div>
       </div>

@@ -1,5 +1,7 @@
 import React from "react";
 import "./header.css";
+import {Link} from "react-router-dom";
+import {SelectBox} from "../selectbox"
 
 import Searchbar from "../searchbar";
 
@@ -28,33 +30,35 @@ export default function Header() {
           }}
         >
           <div style={{ display: "flex", alignItems: "flex-end" }}>
-            <img
-              style={{ width: "60px", height: "auto" }}
-              src="images/logo.png"
-              alt="not found"
-            />
-            <img
-              style={{ width: "90px", height: "auto" }}
-              src="images/propscan.png"
-              alt="not found"
-            />
-            <span className="header-com">.com</span>
+            <Link to="/"  style={{ textDecoration: 'none' }}>
+              <img
+                style={{ width: "60px", height: "auto" }}
+                src="images/logo.png"
+                alt="img"
+              />
+              <img
+                style={{ width: "90px", height: "auto" }}
+                src="images/propscan.png"
+                alt="img"
+              />
+              <span className="header-com">.com</span>
+            </Link>
           </div>
           <div className="header-items">
             <span className="px-4 px-lg-5">
               Sell{" "}
               <img
                 src="images/img_checkmark.svg"
-                alt="not found"
                 style={{ paddingBottom: "2px" }}
+                alt="img"
               />
             </span>
             <span className="px-4 px-lg-5">
               Buy{" "}
               <img
                 src="images/img_checkmark.svg"
-                alt="not found"
                 style={{ paddingBottom: "2px" }}
+                alt="img"
               />
             </span>
             <span className="px-4 px-lg-5">About Us</span>
@@ -82,16 +86,16 @@ export default function Header() {
               <p>
                 Sell{" "} <img
                   src="images/img_checkmark.svg"
-                  alt="not found"
                   style={{ paddingBottom: "2px", filter: "invert(34%) sepia(10%) saturate(6025%) hue-rotate(177deg) brightness(28%) contrast(99%)" }}
+                  alt="img"
                 />
               </p>
               <hr/>
               <p>
                 Buy{" "} <img
                   src="images/img_checkmark.svg"
-                  alt="not found"
                   style={{ paddingBottom: "2px", filter: "invert(34%) sepia(10%) saturate(6025%) hue-rotate(177deg) brightness(28%) contrast(99%)" }}
+                  alt="img"
                 />
               </p>
               <hr/>

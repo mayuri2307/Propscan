@@ -6,7 +6,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 import "./expert.css"
-import Carousel from '../utils/carousel/Carousel';
+import Carousel from '../../utils/carousel';
 
 export default function Experts() {
     return (
