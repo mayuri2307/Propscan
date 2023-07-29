@@ -17,36 +17,49 @@ function CmaNavbar() {
       <div className="container">
         <a
           className="nav-link a_style1"
-          href="/"
+          href="/properties-dashboard/cma/activelisting"
           style={{
-            backgroundColor: window.location.pathname === "/" ? "#E8F9FD" : "",
+            backgroundColor:
+              window.location.pathname ===
+              "/properties-dashboard/cma/activelisting"
+                ? "#E8F9FD"
+                : "",
           }}
         >
           Active Listings
         </a>
         <a
           style={{
-            backgroundColor: window.location.pathname === "/" ? "#E8F9FD" : "",
+            backgroundColor:
+              window.location.pathname ===
+              "/properties-dashboard/cma/pendinglisting"
+                ? "#E8F9FD"
+                : "",
           }}
           className="nav-link active a_style1"
-          href="/"
+          href="/properties-dashboard/cma/pendinglisting"
         >
           Pending Listings
         </a>
         <a
-          href="/"
+          href="/properties-dashboard/cma/soldpricelisting"
           style={{
-            backgroundColor: window.location.pathname === "/" ? "#E8F9FD" : "",
+            backgroundColor:
+              window.location.pathname ===
+              "/properties-dashboard/cma/soldpricelisting"
+                ? "#E8F9FD"
+                : "",
           }}
           className="nav-link active a_style1"
         >
           Sold Price Listings
         </a>
         <a
-          href="/properties-dashboard/crm/qualified"
+          href="/properties-dashboard/cma/marketlisting"
           style={{
             backgroundColor:
-              window.location.pathname === "/properties-dashboard/crm/qualified"
+              window.location.pathname ===
+              "/properties-dashboard/cma/marketlisting"
                 ? "#E8F9FD"
                 : "",
           }}

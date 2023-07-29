@@ -22,6 +22,10 @@ import CrmSold from "./pages/CrmSold";
 import CrmUnlisted from "./pages/CrmUnlisted";
 import CrmArchived from "./pages/CrmArchived";
 import CrmOverview from "./pages/CrmOverview";
+import CrmActiveListing from "./pages/CmaActiveListing";
+import CrmPendingListing from "./pages/CmaPendingListing"
+import CmaSoldPriceListing from "./pages/CmaSoldPriceListing";
+import CmaMarketListing from "./pages/CmaMarketListing";
 
 function App() {
   return (
@@ -87,6 +91,22 @@ function App() {
         <Route
           path="/properties-dashboard/crm/overview"
           element={<CrmOverview />}
+        />
+        <Route
+          path="/properties-dashboard/cma/activelisting"
+          element={<CrmActiveListing />}
+        />
+        <Route
+          path="/properties-dashboard/cma/pendinglisting"
+          element={<CrmPendingListing />}
+        />
+        <Route
+          path="/properties-dashboard/cma/soldpricelisting"
+          element={<CmaSoldPriceListing />}
+        />
+        <Route
+          path="/properties-dashboard/cma/marketlisting"
+          element={<CmaMarketListing />}
         />
       </Routes>
     </BrowserRouter>

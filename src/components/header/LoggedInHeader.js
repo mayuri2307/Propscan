@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "./header.css";
 import "./header.css";
-
+import DropDownProfile from "./DropDownProfile";
 import Searchbar from "../searchbar";
 import getFontData from "../../utils/getFontData";
 
 export default function LoggedInHeader() {
+  const [openProfile, setOpenProfile] = useState(false);
   return (
     <div className="logged-in-header px-4">
       <div style={{ display: "flex", alignItems: "flex-end" }}>
@@ -29,8 +30,10 @@ export default function LoggedInHeader() {
         <span style={getFontData("12px", "500", { color: "#FFF" })}>
           BRIJLAL CHARSI
         </span>
+
         <img
           src="/images/profile.svg"
+          onClick={() => setOpenProfile((prev) => !prev)}
           alt="not found"
           style={{
             marginLeft: "12px",
@@ -39,6 +42,7 @@ export default function LoggedInHeader() {
             borderRadius: "50%",
           }}
         />
+        {openProfile && <DropDownProfile></DropDownProfile>}
       </div>
     </div>
   );
