@@ -177,10 +177,10 @@ export default function PropertyListing(props) {
     const location = useLocation();
     const data = location.state;
     let properties = [];
-    data["properties"] = somedata;
+    // data["properties"] = somedata;
 
     console.log(data["properties"])
-    console.log(props);
+    // console.log(props);
     if(data["properties"].length === 0) {
         properties = propertiesData;
     } else {

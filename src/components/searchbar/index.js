@@ -15,6 +15,7 @@ const searchSuggestions = ["Dwarka", "Pitampura", "Greater Kailash", "Defence Co
 export default function Searchbar({defaultClass="searchbar-setter"}) {
   const searchbarSetterOptions = [
     { label: "New Delhi", value: "New Delhi" },
+    { label: "London", value: "London" },
     { label: "Bangalore", value: "Bangalore" },
     { label: "Mumbai", value: "Mumbai" }
   ];
