@@ -27,6 +27,7 @@ const SelectBox = (
     }
   ) => {
     const [selectedVal, setSelectedVal] = React.useState(value);
+    const color=restProps["color"] || "#0D2855";
     const handleChange = (data) => {
       setSelectedVal(data);
       if (isMulti) {
@@ -44,7 +45,7 @@ const SelectBox = (
             (size && sizes[size]) || ""
           } ${(variant && variants[variant]) || ""}`}
           placeholder={
-            <div className={placeholderClassName} style={{color:"#0D2855", textAlign:"center", fontSize: "min(max(8.5px, 3vw), 14px)"}}>{placeholder}</div>
+            <div className={placeholderClassName} style={{color:color, textAlign:"center", fontSize: "min(max(8.5px, 3vw), 14px)"}}>{placeholder}</div>
           }
           isSearchable={isSearchable}
           isMulti={isMulti} 
@@ -102,7 +103,7 @@ const SelectBox = (
               paddingTop: "0px",
               paddingBottom: "0px",
               "svg": {
-                fill: "#0D2855"
+                fill: color
               }
             }),
             clearIndicator: (provided) => ({
@@ -117,6 +118,7 @@ const SelectBox = (
             placeholder: (base) => ({
               ...base,
               margin: 0,
+              color: color
             }),
           }}
           menuPortalTarget={document.body}

@@ -14,6 +14,10 @@ import "./searchbar.css"
 
 const searchSuggestions = ["Dwarka", "Pitampura", "Greater Kailash", "Defence Colony", "Saket", "Punjabi Bagh", "Lajpat Nagar", "Model Town", "Karol Bagh", "Shahdra"];
 
+const sleep = (ms) => {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+};
+
 export default function Searchbar({defaultClass="searchbar-setter"}) {
   const searchbarSetterOptions = [
     { label: "New Delhi", value: "New Delhi" },
@@ -33,20 +37,22 @@ export default function Searchbar({defaultClass="searchbar-setter"}) {
   const [loading, setLoading] = useState(false);
   const fetchProperties = async (e) => {
     e.preventDefault();
-    let api = "https://api.propscan.in/property/largecard/all";
-    if( city !== "" ) api+=`?city=${city}`;
-    if( squery !== "" ) api+=`&locality=${squery}`;
-    console.log(api);
+    // let api = "http://api.propscan.in/property/largecard/all";
+    // if( city !== "" ) api+=`?city=${city}`;
+    // if( squery !== "" ) api+=`&locality=${squery}`;
+    // console.log(api);
+    setLoading(true);
+    await sleep(2000);
     let properties = [];
-    try{
-      setLoading(true);
-      const response = await fetch(api);
-      properties = await response.json();
-    } catch(err) {
-      console.log(err);
-    }
+    // try{
+      // setLoading(true);
+    //   const response = await fetch(api);
+    //   properties = await response.json();
+    // } catch(err) {
+    //   console.log(err);
+    // }
     setLoading(false);
-    console.log(properties);
+    // console.log(properties);
     navigate(`/properties?city=${city}`, { state: { properties: properties } });
   }
   return (
