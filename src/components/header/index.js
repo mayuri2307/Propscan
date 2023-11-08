@@ -3,6 +3,23 @@ import "./header.css";
 import {Link} from "react-router-dom";
 
 import Searchbar from "../searchbar";
+import { SelectBox } from "../selectbox";
+
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
+const sellOptions = [
+  { label: "Flat", value: "Flat" },
+  { label: "Villa", value: "Villa" },
+  { label: "Apartment", value: "Apartment" }
+];
+
+const buyOptions = [
+  { label: "Flat", value: "Flat" },
+  { label: "Villa", value: "Villa" },
+  { label: "Apartment", value: "Apartment" }
+];
+
 
 export default function Header() {  
   const toggleMenu = () => {
@@ -28,7 +45,7 @@ export default function Header() {
             justifyContent: "space-between",
           }}
         >
-          <div style={{ display: "flex", alignItems: "flex-end" }}>
+          <div style={{ display: "flex", alignItems: "flex-end", flexGrow:"5" }}>
             <Link to="/"  style={{ textDecoration: 'none' }}>
               <img
                 style={{ width: "60px", height: "auto" }}
@@ -44,27 +61,46 @@ export default function Header() {
             </Link>
           </div>
           <div className="header-items">
-            <span className="px-4 px-lg-5">
-              Sell{" "}
-              <img
-                src="images/img_checkmark.svg"
-                style={{ paddingBottom: "2px" }}
-                alt="img"
-              />
-            </span>
-            <span className="px-4 px-lg-5">
-              Buy{" "}
-              <img
-                src="images/img_checkmark.svg"
-                style={{ paddingBottom: "2px" }}
-                alt="img"
-              />
-            </span>
-            <span className="px-4 px-lg-5">About Us</span>
-            <span className="px-4 px-lg-5">Contact Us</span>
-            <a href="/login">
-              <button className="btn-white">Log In/Sign Up</button>
-            </a>
+            <Row>
+              <Col xs="3">
+              <SelectBox
+                    className="font-medium text-blue_gray_900 text-left text-sm w-[9%] md:w-full"
+                    placeholderClassName="text-blue_gray_900"
+                    isMulti={false}
+                    name="group105"
+                    options={sellOptions}
+                    isSearchable={false}
+                    placeholder={"Sell"}
+                    value={"Sell"}
+                    color="white"
+                />
+              </Col>
+              <Col xs="3">
+              <SelectBox
+                    className="font-medium text-blue_gray_900 text-left text-sm w-[9%] md:w-full"
+                    placeholderClassName="text-blue_gray_900"
+                    isMulti={false}
+                    name="group105"
+                    options={sellOptions}
+                    isSearchable={false}
+                    placeholder={"Buy"}
+                    value={"Buy"}
+                    color="white"
+                />
+              </Col>
+              <Col xs="3">
+                <span className="px-3">About Us</span>
+                <span className="">Contact Us</span>
+              </Col>
+              {/* <Col xs="3">
+                <span className="">Contact Us</span>
+              </Col> */}
+              <Col xs="3">
+              <a href="/login">
+                <button className="btn-white">Log In/Sign Up</button>
+              </a>
+              </Col>
+            </Row>
           </div>
           <div className="header-menu-icon" onClick={toggleMenu}>
             <div></div>

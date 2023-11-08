@@ -101,7 +101,7 @@ function CrmListed() {
                   marginTop: "3.5vh",
                 }}
               >
-                <p className="text1">State</p>
+                <p className="text_1">State</p>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="8"
@@ -126,7 +126,7 @@ function CrmListed() {
                   marginLeft: "6vh",
                 }}
               >
-                <p className="text1">City</p>
+                <p className="text_1">City</p>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="8"
@@ -151,7 +151,7 @@ function CrmListed() {
                   marginLeft: "6vh",
                 }}
               >
-                <p className="text1">Property Type</p>
+                <p className="text_1">Property Type</p>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="8"
@@ -176,7 +176,7 @@ function CrmListed() {
                   marginLeft: "6vh",
                 }}
               >
-                <p className="text1">Property Category</p>
+                <p className="text_1">Property Category</p>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="8"
@@ -203,7 +203,7 @@ function CrmListed() {
                   width: "90px",
                 }}
               >
-                <p className="text1">Sale Type</p>
+                <p className="text_1">Sale Type</p>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="8"
@@ -247,7 +247,7 @@ function CrmListed() {
               </div>
             </div>
             <div>
-              <p className="text2">5/5 results</p>
+              <p className="text_2">5/5 results</p>
             </div>
             <div>
               <Table />

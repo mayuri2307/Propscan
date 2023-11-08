@@ -125,6 +125,64 @@ const somedata = [
     }
 ]
 
+const staticProperties = [
+    {
+        "id": "1",
+        "locality_society": "Dwarka, Delhi",
+        "main_image_link": "images/img_prop_3.png",
+        "availability_status": "ready_to_move",
+        "price_per_sq_ft": "50000.00",
+        "expected_price": "5000000",
+        "location_advantages": "Located near a school and a shopping mall...",
+        "user_display_name": "Adarsh Mittal",
+        "rera_registered": "false"
+    },
+    {
+        "id": "2",
+        "locality_society": "Bellandur, Bangalore",
+        "main_image_link": "images/img_prop_2.png",
+        "availability_status": "ready_to_move",
+        "price_per_sq_ft": "20000.00",
+        "expected_price": "2000000",
+        "location_advantages": "Located near a shopping mall...",
+        "user_display_name": "Subramanyam Venketesh",
+        "rera_registered": "false"
+    },
+    {
+        "id": "3",
+        "locality_society": "Pitampure, Delhi",
+        "main_image_link": "images/img_prop_1.png",
+        "availability_status": "ready_to_move",
+        "price_per_sq_ft": "8000.00",
+        "expected_price": "8000000",
+        "location_advantages": "Close to railway stataion",
+        "user_display_name": "Rahul Gupta",
+        "rera_registered": "false"
+    },
+    {
+        "id": "4",
+        "locality_society": "Sec 3, Chandigarh",
+        "main_image_link": "images/img_prop_10.png",
+        "availability_status": "ready_to_move",
+        "price_per_sq_ft": "1000.00",
+        "expected_price": "100000",
+        "location_advantages": "Located near a school and a shopping mall...",
+        "user_display_name": "Kartik Garg",
+        "rera_registered": "false"
+    },
+    {
+        "id": "5",
+        "locality_society": "Uttar Pradesh",
+        "main_image_link": "images/img_prop_3.png",
+        "availability_status": "ready_to_move",
+        "price_per_sq_ft": "3000.00",
+        "expected_price": "300000",
+        "location_advantages": "Located close to airport",
+        "user_display_name": "Aditya Goswami",
+        "rera_registered": "false"
+    }
+]
+
 const propertiesData = [
     {
         name: "The Cressida - Chetan Garg Real Estate",
@@ -177,7 +235,7 @@ export default function PropertyListing(props) {
     const location = useLocation();
     const data = location.state;
     let properties = [];
-    // data["properties"] = somedata;
+    data["properties"] = staticProperties;
 
     console.log(data["properties"])
     for (const property of data["properties"]) {
@@ -210,7 +268,8 @@ export default function PropertyListing(props) {
         <>
             <div className="d-none d-md-block">
                 {properties.length>0?properties.map((props, index) =>
-                    <div className='properties' key={index} onClick={() => navigate(`/property/${props["id"]}`)}>
+                    // <div className='properties' key={index} onClick={() => navigate(`/property/${props["id"]}`)}>
+                        <div className='properties' key={index} onClick={() => navigate(`/property`)}>
                         <PropertyCardLarge {...props}  />
                     </div>
                 ): <p className='text-center p-5'>Duhh, There is no property to display :(</p>}
@@ -221,8 +280,9 @@ export default function PropertyListing(props) {
                     <div key={index}>
                         <Col xs="1" ></Col>
                             <Col xs="10" className='mb-4'
-                                onClick={() => navigate(`/property/${props["id"]}`)}
-                            >
+                                onClick={() => navigate(`/property`)}
+                                // onClick={() => navigate(`/property/${props["id"]}`)}
+>
                                 <PropertyCardSmall
                                     src={props.propertyImage}
                                     text={props.name}
